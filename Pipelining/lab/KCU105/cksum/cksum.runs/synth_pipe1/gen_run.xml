@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_pipe1" LaunchPart="xcku040-ffva1156-2-e" LaunchTime="1669398192">
+  <File Type="RDS-RDS" Name="cksum.vds"/>
+  <File Type="REPORTS-TCL" Name="cksum_reports.tcl"/>
+  <File Type="PA-TCL" Name="cksum.tcl"/>
+  <File Type="RDS-DCP" Name="cksum.dcp"/>
+  <File Type="RDS-UTIL" Name="cksum_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="cksum_utilization_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/support/cksum.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../sf_trunk/FPGA/TopicClusters/Pipelining/support/cksum.v"/>
+        <Attr Name="ImportTime" Val="1656937352"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="cksum"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/support/cksum.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../sf_trunk/FPGA/TopicClusters/Pipelining/support/cksum.xdc"/>
+        <Attr Name="ImportTime" Val="1656937352"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+    <Step Id="synth_design">
+      <Option Id="MoreOptsStr"><![CDATA[-verilog_define PIPELINED1]]></Option>
+    </Step>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clk_gen"/>
+</GenRun>

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Nov 25 23:07:51 2022
+# Process ID: 4186
+# Current directory: /home/amd/training/Pipelining/lab/KCU105/cksum/cksum.runs/clk_gen_synth_1
+# Command line: vivado -log clk_gen.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_gen.tcl
+# Log file: /home/amd/training/Pipelining/lab/KCU105/cksum/cksum.runs/clk_gen_synth_1/clk_gen.vds
+# Journal file: /home/amd/training/Pipelining/lab/KCU105/cksum/cksum.runs/clk_gen_synth_1/vivado.jou
+# Running On: amd, OS: Linux, CPU Frequency: 2807.998 MHz, CPU Physical cores: 4, Host memory: 16778 MB
+#-----------------------------------------------------------
+source clk_gen.tcl -notrace

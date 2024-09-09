@@ -1,0 +1,78 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Wed Nov 30 13:19:52 2022
+| Host         : amd running 64-bit Ubuntu 20.04.5 LTS
+| Command      : report_drc -file wave_gen_drc_routed.rpt -pb wave_gen_drc_routed.pb -rpx wave_gen_drc_routed.rpx
+| Design       : wave_gen
+| Device       : xcku040-ffva1156-2-e
+| Speed File   : -2
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 4
++-----------+------------------+-----------------------------------------------------+------------+
+| Rule      | Severity         | Description                                         | Violations |
++-----------+------------------+-----------------------------------------------------+------------+
+| NSTD-1    | Critical Warning | Unspecified I/O Standard                            | 1          |
+| UCIO-1    | Critical Warning | Unconstrained Logical Port                          | 1          |
+| CFGBVS-1  | Warning          | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
+| RTSTAT-10 | Warning          | No routable loads                                   | 1          |
++-----------+------------------+-----------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+NSTD-1#1 Critical Warning
+Unspecified I/O Standard  
+18 out of 18 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: clk_pin_n, clk_pin_p, dac_clr_n_pin, dac_cs_n_pin, lb_sel_pin,
+led_pins[7:0], rst_pin, rxd_pin, spi_clk_pin, spi_mosi_pin, txd_pin.
+Related violations: <none>
+
+UCIO-1#1 Critical Warning
+Unconstrained Logical Port  
+18 out of 18 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: clk_pin_n, clk_pin_p, dac_clr_n_pin, dac_cs_n_pin, lb_sel_pin,
+led_pins[7:0], rst_pin, rxd_pin, spi_clk_pin, spi_mosi_pin, txd_pin.
+Related violations: <none>
+
+CFGBVS-1#1 Warning
+Missing CFGBVS and CONFIG_VOLTAGE Design Properties  
+Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+123 net(s) have no routable loads. The problem bus(es) and/or net(s) are char_fifo_i0/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v8_fifo.fblk/rst_val_sym.gextw_sym[1].inst_extd/gonep.inst_prim/CASDOUTP[3:1],
+char_fifo_i0/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v8_fifo.fblk/rst_val_sym.gextw_sym[1].inst_extd/gonep.inst_prim/CASDOUT[31:8],
+char_fifo_i0/U0/inst_fifo_gen/gconvfifo.rf/gbi.bi/v8_fifo.fblk/rst_val_sym.gextw_sym[1].inst_extd/gonep.inst_prim/DOUTP[1],
+clk_gen_i0/clk_div_i0/_carry__0_n_2, clk_gen_i0/clk_div_i0/_carry__0_n_3,
+clk_gen_i0/clk_div_i0/_carry__0_n_4, clk_gen_i0/clk_div_i0/_carry__0_n_5,
+clk_gen_i0/clk_div_i0/_carry__0_n_6, clk_gen_i0/clk_div_i0/_carry__0_n_7,
+clk_gen_i0/clk_div_i0/_carry_n_1, clk_gen_i0/clk_div_i0/_carry_n_2,
+clk_gen_i0/clk_div_i0/_carry_n_3, clk_gen_i0/clk_div_i0/_carry_n_4,
+clk_gen_i0/clk_div_i0/_carry_n_5, clk_gen_i0/clk_div_i0/_carry_n_6
+ (the first 15 of 96 listed nets/buses).
+Related violations: <none>
+
+

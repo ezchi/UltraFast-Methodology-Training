@@ -1,0 +1,16 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date              : Sun Nov 27 11:02:09 2022
+| Host              : amd running 64-bit Ubuntu 20.04.5 LTS
+| Command           : report_bus_skew -warn_on_violation -file reset_example_top_bus_skew_routed.rpt -pb reset_example_top_bus_skew_routed.pb -rpx reset_example_top_bus_skew_routed.rpx
+| Design            : reset_example_top
+| Device            : xcku040-ffva1156
+| Speed File        : -2  PRODUCTION 1.25 12-04-2018
+| Temperature Grade : E
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

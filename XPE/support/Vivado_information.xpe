@@ -1,0 +1,384 @@
+<?xml version="1.0"?>
+<POWERDATA author="Vivado Power Analysis" dataVersion="2020.2" design="blkdsgn_wrapper" designState="routed" date="Mon Mar  8 11:25:34 2021" pwrOpt="None" activityLevel="vectorless">
+	<ENVIRONMENT>
+		<DEVICE part="xcvm1802" grade="extended" staticScreen="STANDARD" package="vsva2197" speed="-2MP" process="typical" vid="No">
+		</DEVICE>
+		<VOLTAGESOURCES>
+			<SOURCE name="Vccint" voltage="0.800000" icc="0.341829" iccq="6.889909" power="5.785390">
+			</SOURCE>
+			<SOURCE name="Vccaux" voltage="1.500000" icc="0.259006" iccq="1.166360" power="2.138049">
+			</SOURCE>
+			<SOURCE name="VCC_IO" voltage="0.800000" icc="0.722441" iccq="0.197506" power="0.735957">
+			</SOURCE>
+			<SOURCE name="VCC_SOC" voltage="0.800000" icc="3.487407" iccq="1.198391" power="3.748639">
+			</SOURCE>
+			<SOURCE name="VCCRAM" voltage="0.800000" icc="0.047947" iccq="0.060278" power="0.086580">
+			</SOURCE>
+			<SOURCE name="Vcco15" voltage="1.500000" icc="0.000817" iccq="0.009638" power="0.015682">
+			</SOURCE>
+			<SOURCE name="Vcco12" voltage="1.200000" icc="0.455271" iccq="0.023296" power="0.574281">
+			</SOURCE>
+			<SOURCE name="VCC_PSFP" voltage="0.800000" icc="0.000000" iccq="0.060757" power="0.048606">
+			</SOURCE>
+			<SOURCE name="VCC_PSLP" voltage="0.800000" icc="0.000000" iccq="0.078085" power="0.062468">
+			</SOURCE>
+			<SOURCE name="VCCO_502" voltage="3.300000" icc="0.000000" iccq="0.000010" power="0.000033">
+			</SOURCE>
+			<SOURCE name="VCC_PMC" voltage="0.800000" icc="0.000000" iccq="0.042629" power="0.034103">
+			</SOURCE>
+			<SOURCE name="VCCAUX_PMC" voltage="1.500000" icc="0.000000" iccq="0.011094" power="0.016642">
+			</SOURCE>
+			<SOURCE name="VCCO_503" voltage="3.300000" icc="0.000000" iccq="0.000000" power="0.000000">
+			</SOURCE>
+			<SOURCE name="VCCAUX_SMON" voltage="1.500000" icc="0.000000" iccq="0.008028" power="0.012042">
+			</SOURCE>
+		</VOLTAGESOURCES>
+		<THERMAL>
+			<AMBIENT value="25.000000">
+			</AMBIENT>
+			<JUNCTION value="100.0 (C)">
+			</JUNCTION>
+			<TJA value="5.66">
+			</TJA>
+		</THERMAL>
+	</ENVIRONMENT>
+	<BLOCKDETAILS>
+		<BYTYPE>
+			<BLOCKTYPE name="Clocks">
+				<CLOCK name="clkout1_primitive" freq="100" srcType="CLKCTRL" srcId="26552" srcName="blkdsgn_i/clk_wiz/inst/clock_primitive_inst/BUFG_clkout1_inst" FoPerSite="8.1" enableRate="1" sliceEnableRate="0.4404">
+				</CLOCK>
+				<CLOCK name="pll_clktoxphy[1]" freq="3200" srcType="XPLL" srcId="16651" srcName="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1" FoPerSite="1" enableRate="1" sliceEnableRate="0">
+				</CLOCK>
+				<CLOCK name="pll_clktoxphy[0]" freq="3200" srcType="XPLL" srcId="16646" srcName="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank0" FoPerSite="1" enableRate="1" sliceEnableRate="0">
+				</CLOCK>
+				<CLOCK name="pll_clktoxphy[2]" freq="3200" srcType="XPLL" srcId="16654" srcName="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank2" FoPerSite="1" enableRate="1" sliceEnableRate="0">
+				</CLOCK>
+				<CLOCK name="bank1_xpll0_fifo_rd_clk" freq="800" srcType="XPLL" srcId="16651" srcName="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1" FoPerSite="1" enableRate="1" sliceEnableRate="0">
+				</CLOCK>
+				<CLOCK name="i_pclk_tg_2" freq="25" srcType="CLKCTRL" srcId="73521" srcName="blkdsgn_i/perf_axi_tg_2/inst/u_tg_PCLK" FoPerSite="2.588" enableRate="1" sliceEnableRate="1">
+				</CLOCK>
+				<CLOCK name="i_pclk_tg_1" freq="25" srcType="CLKCTRL" srcId="73521" srcName="blkdsgn_i/perf_axi_tg_1/inst/u_tg_PCLK" FoPerSite="2.588" enableRate="1" sliceEnableRate="1">
+				</CLOCK>
+				<CLOCK name="i_pclk_tg_5" freq="25" srcType="CLKCTRL" srcId="73521" srcName="blkdsgn_i/perf_axi_tg_5/inst/u_tg_PCLK" FoPerSite="2.588" enableRate="1" sliceEnableRate="1">
+				</CLOCK>
+				<CLOCK name="i_pclk_tg_4" freq="25" srcType="CLKCTRL" srcId="73521" srcName="blkdsgn_i/perf_axi_tg_4/inst/u_tg_PCLK" FoPerSite="2.588" enableRate="1" sliceEnableRate="1">
+				</CLOCK>
+				<CLOCK name="i_pclk_tg" freq="25" srcType="CLKCTRL" srcId="73521" srcName="blkdsgn_i/perf_axi_tg_0/inst/u_tg_PCLK" FoPerSite="2.4444" enableRate="1" sliceEnableRate="1">
+				</CLOCK>
+				<CLOCK name="i_pclk_tg_6" freq="25" srcType="CLKCTRL" srcId="73521" srcName="blkdsgn_i/perf_axi_tg_6/inst/u_tg_PCLK" FoPerSite="2.588" enableRate="1" sliceEnableRate="1">
+				</CLOCK>
+				<CLOCK name="i_pclk_tg_3" freq="25" srcType="CLKCTRL" srcId="73521" srcName="blkdsgn_i/perf_axi_tg_3/inst/u_tg_PCLK" FoPerSite="2.4444" enableRate="1" sliceEnableRate="1">
+				</CLOCK>
+				<CLOCK name="bank1_clkout0" freq="800" srcType="XPLL" srcId="16651" srcName="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1" FoPerSite="1" enableRate="1" sliceEnableRate="0">
+				</CLOCK>
+				<CLOCK name="mc_clk_xpll" freq="800" srcType="XPLL" srcId="16651" srcName="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1" FoPerSite="1" enableRate="1" sliceEnableRate="0">
+				</CLOCK>
+				<CLOCK name="ddr4_dimm1_sma_clk_clk_p" freq="200" srcType="External" srcId="4294967295" srcName="IO_PORT" FoPerSite="1" enableRate="1" sliceEnableRate="0">
+				</CLOCK>
+				<CLOCK name="clk_100MHz" freq="100" srcType="External" srcId="4294967295" srcName="IO_PORT" FoPerSite="1" enableRate="1" sliceEnableRate="0">
+				</CLOCK>
+			</BLOCKTYPE>
+			<BLOCKTYPE name="LOGIC">
+				<LOGIC name="Unassigned_Clock LUTs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="Unassigned_Clock" clockFreq="200" toggleRate="1.353" luts="56" ru="0">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_0_0_aclk LUTs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_0_0_aclk" clockFreq="100" toggleRate="4.915" luts="4609" ru="8.9563">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_0_0_pclk LUTs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_0_0_pclk" clockFreq="25" toggleRate="5.137" luts="42" ru="5.4715">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_1_0_aclk LUTs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_1_0_aclk" clockFreq="100" toggleRate="4.917" luts="4606" ru="9.0773">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_1_0_pclk LUTs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_1_0_pclk" clockFreq="25" toggleRate="5.056" luts="42" ru="6.1335">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_2_0_aclk LUTs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_2_0_aclk" clockFreq="100" toggleRate="4.914" luts="4608" ru="8.9761">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_2_0_pclk LUTs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_2_0_pclk" clockFreq="25" toggleRate="5.054" luts="42" ru="5.829">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_3_0_aclk LUTs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_3_0_aclk" clockFreq="100" toggleRate="4.915" luts="4611" ru="9.1252">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_3_0_pclk LUTs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_3_0_pclk" clockFreq="25" toggleRate="5.072" luts="42" ru="5.4709">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_4_0_aclk LUTs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_4_0_aclk" clockFreq="100" toggleRate="4.916" luts="4607" ru="8.9668">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_4_0_pclk LUTs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_4_0_pclk" clockFreq="25" toggleRate="5.054" luts="42" ru="5.3057">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_5_0_aclk LUTs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_5_0_aclk" clockFreq="100" toggleRate="4.917" luts="4607" ru="9.057">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_5_0_pclk LUTs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_5_0_pclk" clockFreq="25" toggleRate="5.127" luts="42" ru="5.3004">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_6_0_aclk LUTs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_6_0_aclk" clockFreq="100" toggleRate="4.916" luts="4608" ru="9.0178">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_6_0_pclk LUTs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_6_0_pclk" clockFreq="25" toggleRate="5.116" luts="42" ru="6.0615">
+				</LOGIC>
+				<LOGIC name="clkout1_primitive LUTs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="clkout1_primitive" clockFreq="100" toggleRate="0.6289" luts="16" ru="0">
+				</LOGIC>
+				<LOGIC name="clkout1_primitive SRLs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="clkout1_primitive" clockFreq="100" toggleRate="0.06319" SRL="421" ru="0">
+				</LOGIC>
+				<LOGIC name="clkout1_primitive LUTRAMs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="clkout1_primitive" clockFreq="100" toggleRate="2.747" RAM="2800" ru="0">
+				</LOGIC>
+				<LOGIC name="clkout1_primitive FFs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="clkout1_primitive" clockFreq="100" toggleRate="4.3615" ffs="56486" ru="11.1112">
+				</LOGIC>
+				<LOGIC name="i_pclk_tg FFs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="i_pclk_tg" clockFreq="25" toggleRate="5.258" ffs="38" ru="11.4367">
+				</LOGIC>
+				<LOGIC name="i_pclk_tg_1 FFs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="i_pclk_tg_1" clockFreq="25" toggleRate="5.258" ffs="38" ru="11.715">
+				</LOGIC>
+				<LOGIC name="i_pclk_tg_2 FFs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="i_pclk_tg_2" clockFreq="25" toggleRate="5.258" ffs="38" ru="11.7303">
+				</LOGIC>
+				<LOGIC name="i_pclk_tg_3 FFs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="i_pclk_tg_3" clockFreq="25" toggleRate="5.258" ffs="38" ru="11.8064">
+				</LOGIC>
+				<LOGIC name="i_pclk_tg_4 FFs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="i_pclk_tg_4" clockFreq="25" toggleRate="5.258" ffs="38" ru="11.6373">
+				</LOGIC>
+				<LOGIC name="i_pclk_tg_5 FFs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="i_pclk_tg_5" clockFreq="25" toggleRate="5.258" ffs="38" ru="11.598">
+				</LOGIC>
+				<LOGIC name="i_pclk_tg_6 FFs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="i_pclk_tg_6" clockFreq="25" toggleRate="5.258" ffs="38" ru="11.598">
+				</LOGIC>
+				<LOGIC name="High_Fanout_Nets" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_6_0_aclk" clockFreq="100" toggleRate="0" BUFG="7" ru="30.8544">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_0_0_aclk HFNs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_0_0_aclk" clockFreq="100" toggleRate="1.728" luts="39" ru="24.6376">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_1_0_aclk HFNs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_1_0_aclk" clockFreq="100" toggleRate="1.666" luts="41" ru="24.38">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_2_0_aclk HFNs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_2_0_aclk" clockFreq="100" toggleRate="1.649" luts="40" ru="24.432">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_3_0_aclk HFNs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_3_0_aclk" clockFreq="100" toggleRate="1.7303" luts="39" ru="24.4166">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_4_0_aclk HFNs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_4_0_aclk" clockFreq="100" toggleRate="1.6536" luts="42" ru="24.294">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_5_0_aclk HFNs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_5_0_aclk" clockFreq="100" toggleRate="1.673" luts="41" ru="24.2877">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_6_0_aclk HFNs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_6_0_aclk" clockFreq="100" toggleRate="1.6673" luts="43" ru="24.2927">
+				</LOGIC>
+				<LOGIC name="clkout1_primitive HFNs" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="clkout1_primitive" clockFreq="100" toggleRate="2.927" ffs="484" ru="24.575">
+				</LOGIC>
+				<LOGIC name="Unassigned_Clock Others" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="Unassigned_Clock" clockFreq="200" toggleRate="4.309" lookahead8="91" ru="0">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_0_0_aclk Others" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_0_0_aclk" clockFreq="100" toggleRate="9.41" lookahead8="269" ru="1.27338">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_1_0_aclk Others" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_1_0_aclk" clockFreq="100" toggleRate="9.418" lookahead8="269" ru="1.09302">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_2_0_aclk Others" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_2_0_aclk" clockFreq="100" toggleRate="9.41" lookahead8="269" ru="1.19263">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_3_0_aclk Others" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_3_0_aclk" clockFreq="100" toggleRate="9.42" lookahead8="269" ru="1.2883">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_4_0_aclk Others" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_4_0_aclk" clockFreq="100" toggleRate="9.416" lookahead8="269" ru="1.24066">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_5_0_aclk Others" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_5_0_aclk" clockFreq="100" toggleRate="9.414" lookahead8="269" ru="1.15956">
+				</LOGIC>
+				<LOGIC name="blkdsgn_perf_axi_tg_6_0_aclk Others" hierName="blkdsgn_wrapper/blkdsgn_i" clockName="blkdsgn_perf_axi_tg_6_0_aclk" clockFreq="100" toggleRate="9.41" lookahead8="269" ru="1.1599">
+				</LOGIC>
+			</BLOCKTYPE>
+			<BLOCKTYPE name="BRAM">
+				<MODULE name="blkdsgn_i/clk_wiz/inst/clock_primitive_inst/clk_out1_blkdsgn_i/perf_axi_tg_0/inst/i_pclk_tg" count="6">
+					<GROUPSUMMARY>
+						<BRAM name="blkdsgn_i/clk_wiz/inst/clock_primitive_inst/clk_out1_blkdsgn_i/perf_axi_tg_0/inst/i_pclk_tg" hierName="blkdsgn_wrapper/blkdsgn_i" mode="RAMB36SDP" toggleRate="0.000000" power="0.004523" sp="0.000000">
+							<RAMPORT name="A" clock="clkout1_primitive" clockFreq="100" readWidth="72" writeWidth="36" enableRate="0.674660" writeMode="WRITE_FIRST" writeRate="0.000000">
+							</RAMPORT>
+							<RAMPORT name="B" clock="i_pclk_tg" clockFreq="25" readWidth="36" writeWidth="72" enableRate="1.000000" writeMode="WRITE_FIRST" writeRate="0.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="blkdsgn_i/clk_wiz/inst/clock_primitive_inst/clk_out1_blkdsgn_i/perf_axi_tg_1/inst/i_pclk_tg" count="6">
+					<GROUPSUMMARY>
+						<BRAM name="blkdsgn_i/clk_wiz/inst/clock_primitive_inst/clk_out1_blkdsgn_i/perf_axi_tg_1/inst/i_pclk_tg" hierName="blkdsgn_wrapper/blkdsgn_i" mode="RAMB36SDP" toggleRate="0.000000" power="0.004523" sp="0.000000">
+							<RAMPORT name="A" clock="clkout1_primitive" clockFreq="100" readWidth="72" writeWidth="36" enableRate="0.674660" writeMode="WRITE_FIRST" writeRate="0.000000">
+							</RAMPORT>
+							<RAMPORT name="B" clock="i_pclk_tg_1" clockFreq="25" readWidth="36" writeWidth="72" enableRate="1.000000" writeMode="WRITE_FIRST" writeRate="0.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="blkdsgn_i/clk_wiz/inst/clock_primitive_inst/clk_out1_blkdsgn_i/perf_axi_tg_2/inst/i_pclk_tg" count="6">
+					<GROUPSUMMARY>
+						<BRAM name="blkdsgn_i/clk_wiz/inst/clock_primitive_inst/clk_out1_blkdsgn_i/perf_axi_tg_2/inst/i_pclk_tg" hierName="blkdsgn_wrapper/blkdsgn_i" mode="RAMB36SDP" toggleRate="0.000000" power="0.004523" sp="0.000000">
+							<RAMPORT name="A" clock="clkout1_primitive" clockFreq="100" readWidth="72" writeWidth="36" enableRate="0.674660" writeMode="WRITE_FIRST" writeRate="0.000000">
+							</RAMPORT>
+							<RAMPORT name="B" clock="i_pclk_tg_2" clockFreq="25" readWidth="36" writeWidth="72" enableRate="1.000000" writeMode="WRITE_FIRST" writeRate="0.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="blkdsgn_i/clk_wiz/inst/clock_primitive_inst/clk_out1_blkdsgn_i/perf_axi_tg_3/inst/i_pclk_tg" count="6">
+					<GROUPSUMMARY>
+						<BRAM name="blkdsgn_i/clk_wiz/inst/clock_primitive_inst/clk_out1_blkdsgn_i/perf_axi_tg_3/inst/i_pclk_tg" hierName="blkdsgn_wrapper/blkdsgn_i" mode="RAMB36SDP" toggleRate="0.000000" power="0.004523" sp="0.000000">
+							<RAMPORT name="A" clock="clkout1_primitive" clockFreq="100" readWidth="72" writeWidth="36" enableRate="0.674660" writeMode="WRITE_FIRST" writeRate="0.000000">
+							</RAMPORT>
+							<RAMPORT name="B" clock="i_pclk_tg_3" clockFreq="25" readWidth="36" writeWidth="72" enableRate="1.000000" writeMode="WRITE_FIRST" writeRate="0.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="blkdsgn_i/clk_wiz/inst/clock_primitive_inst/clk_out1_blkdsgn_i/perf_axi_tg_4/inst/i_pclk_tg" count="6">
+					<GROUPSUMMARY>
+						<BRAM name="blkdsgn_i/clk_wiz/inst/clock_primitive_inst/clk_out1_blkdsgn_i/perf_axi_tg_4/inst/i_pclk_tg" hierName="blkdsgn_wrapper/blkdsgn_i" mode="RAMB36SDP" toggleRate="0.000000" power="0.004523" sp="0.000000">
+							<RAMPORT name="A" clock="clkout1_primitive" clockFreq="100" readWidth="72" writeWidth="36" enableRate="0.674660" writeMode="WRITE_FIRST" writeRate="0.000000">
+							</RAMPORT>
+							<RAMPORT name="B" clock="i_pclk_tg_4" clockFreq="25" readWidth="36" writeWidth="72" enableRate="1.000000" writeMode="WRITE_FIRST" writeRate="0.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="blkdsgn_i/clk_wiz/inst/clock_primitive_inst/clk_out1_blkdsgn_i/perf_axi_tg_5/inst/i_pclk_tg" count="6">
+					<GROUPSUMMARY>
+						<BRAM name="blkdsgn_i/clk_wiz/inst/clock_primitive_inst/clk_out1_blkdsgn_i/perf_axi_tg_5/inst/i_pclk_tg" hierName="blkdsgn_wrapper/blkdsgn_i" mode="RAMB36SDP" toggleRate="0.000000" power="0.004523" sp="0.000000">
+							<RAMPORT name="A" clock="clkout1_primitive" clockFreq="100" readWidth="72" writeWidth="36" enableRate="0.674660" writeMode="WRITE_FIRST" writeRate="0.000000">
+							</RAMPORT>
+							<RAMPORT name="B" clock="i_pclk_tg_5" clockFreq="25" readWidth="36" writeWidth="72" enableRate="1.000000" writeMode="WRITE_FIRST" writeRate="0.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="blkdsgn_i/clk_wiz/inst/clock_primitive_inst/clk_out1_blkdsgn_i/perf_axi_tg_6/inst/i_pclk_tg" count="6">
+					<GROUPSUMMARY>
+						<BRAM name="blkdsgn_i/clk_wiz/inst/clock_primitive_inst/clk_out1_blkdsgn_i/perf_axi_tg_6/inst/i_pclk_tg" hierName="blkdsgn_wrapper/blkdsgn_i" mode="RAMB36SDP" toggleRate="0.000000" power="0.004523" sp="0.000000">
+							<RAMPORT name="A" clock="clkout1_primitive" clockFreq="100" readWidth="72" writeWidth="36" enableRate="0.674660" writeMode="WRITE_FIRST" writeRate="0.000000">
+							</RAMPORT>
+							<RAMPORT name="B" clock="i_pclk_tg_6" clockFreq="25" readWidth="36" writeWidth="72" enableRate="1.000000" writeMode="WRITE_FIRST" writeRate="0.000000">
+							</RAMPORT>
+						</BRAM>
+					</GROUPSUMMARY>
+				</MODULE>
+			</BLOCKTYPE>
+			<BLOCKTYPE name="MMCM">
+				<MMCM name="blkdsgn_i/clk_wiz/inst/clock_primitive_inst/MMCME5_inst" srcId="26548" clock="blkdsgn_i/clk_wiz/inst/clock_primitive_inst/clkin1_primitive" clockFreq="100" phaseShift="None" interpolators="1" divCounter="1" multCounter="30.000000" clock0Div="30" clock1Div="12" clock2Div="12" clock3Div="12" clock4Div="12" clock5Div="12" clock6Div="12" powerDownRate="0.000000" VCCRAM="0.033073" Vccaux="0.028438">
+				</MMCM>
+			</BLOCKTYPE>
+			<BLOCKTYPE name="XPLL">
+				<XPLL name="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank0" srcId="16646" clock="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/bank1_clkout0" clockFreq="800" divCounter="2" multCounter="8" clock0Div="2" clock1Div="8" clock2Div="2" clock3Div="2" clock4Div="0" clock5Div="0" powerDownRate="0.000000" Vccint_io="0.024030" Vccaux="0.053180">
+				</XPLL>
+				<XPLL name="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank1" srcId="16651" clock="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/sys_clk_O" clockFreq="200" divCounter="1" multCounter="16" clock0Div="4" clock1Div="4" clock2Div="4" clock3Div="2" clock4Div="0" clock5Div="0" powerDownRate="0.000000" Vccint_io="0.022453" Vccaux="0.053180">
+				</XPLL>
+				<XPLL name="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_xpll0_bank2" srcId="16654" clock="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/bank1_clkout0" clockFreq="800" divCounter="2" multCounter="8" clock0Div="2" clock1Div="8" clock2Div="2" clock3Div="2" clock4Div="0" clock5Div="0" powerDownRate="0.000000" Vccint_io="0.024030" Vccaux="0.053180">
+				</XPLL>
+			</BLOCKTYPE>
+			<BLOCKTYPE name="DSP">
+				<MODULE name="blkdsgn_wrapper/blkdsgn_i|blkdsgn_i/clk_wiz/inst/clock_primitive_inst/clk_out1" count="7">
+					<GROUPSUMMARY>
+						<DSP name="blkdsgn_wrapper/blkdsgn_i|blkdsgn_i/clk_wiz/inst/clock_primitive_inst/clk_out1" clock="clkout1_primitive" toggleRate="24.635954" clockFreq="100" rpConfig="27x24 + 58" dspMode="INT24" multUsed="Yes" mregUsed="No" preAdderUsed="No" inputPipelineUsed="No" b16Used="No" fpAdderUsed="No" opmodeConst="Yes" power="0.007146">
+						</DSP>
+					</GROUPSUMMARY>
+				</MODULE>
+			</BLOCKTYPE>
+			<BLOCKTYPE name="IO">
+				<MODULE name="clk_100MHz" count="1">
+					<GROUPSUMMARY>
+						<IO name="clk_100MHz" clock="clk_100MHz" clockFreq="100.000001" ioStandard="UNDEFINED" bidis="0" inputs="1" outputs="0" signalRate="200.000000" toggleRate="0.000000" dataRate="Clock" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="Yes" inTerm="RTT_NONE" outTerm="NONE" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000000" vccoCurrent="0.000000" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="ddr4_dimm1_act_n" count="1">
+					<GROUPSUMMARY>
+						<IO name="ddr4_dimm1_act_n" clock="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/pll_clktoxphy[1]" clockFreq="1600.000000" ioStandard="SSTL12" bidis="0" inputs="0" outputs="1" signalRate="400.000000" toggleRate="0.000000" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="SDR" serdes="Yes" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_40_40" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.006749" vccoCurrent="0.005624" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="ddr4_dimm1_adr&lt;0:16&gt;" count="17">
+					<GROUPSUMMARY>
+						<IO name="ddr4_dimm1_adr&lt;0:16&gt;" clock="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/pll_clktoxphy[1]" clockFreq="1600.000000" ioStandard="SSTL12" bidis="0" inputs="0" outputs="17" signalRate="400.000000" toggleRate="0.000000" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="SDR" serdes="Yes" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_40_40" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.114737" vccoCurrent="0.095614" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="ddr4_dimm1_ba&lt;0:1&gt;" count="2">
+					<GROUPSUMMARY>
+						<IO name="ddr4_dimm1_ba&lt;0:1&gt;" clock="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/pll_clktoxphy[1]" clockFreq="1600.000000" ioStandard="SSTL12" bidis="0" inputs="0" outputs="2" signalRate="400.000000" toggleRate="0.000000" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="SDR" serdes="Yes" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_40_40" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.013499" vccoCurrent="0.011249" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="ddr4_dimm1_bg&lt;0:1&gt;" count="2">
+					<GROUPSUMMARY>
+						<IO name="ddr4_dimm1_bg&lt;0:1&gt;" clock="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/pll_clktoxphy[1]" clockFreq="1600.000000" ioStandard="SSTL12" bidis="0" inputs="0" outputs="2" signalRate="400.000000" toggleRate="0.000000" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="SDR" serdes="Yes" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_40_40" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.013499" vccoCurrent="0.011249" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="ddr4_dimm1_ck_t" count="1">
+					<GROUPSUMMARY>
+						<IO name="ddr4_dimm1_ck_t" clock="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/pll_clktoxphy[1]" clockFreq="1600.000000" ioStandard="DIFF_SSTL12" bidis="0" inputs="0" outputs="1" signalRate="400.000000" toggleRate="0.000000" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="SDR" serdes="Yes" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_40_40" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.013403" vccoCurrent="0.011169" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="ddr4_dimm1_cke" count="1">
+					<GROUPSUMMARY>
+						<IO name="ddr4_dimm1_cke" clock="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/pll_clktoxphy[1]" clockFreq="1600.000000" ioStandard="SSTL12" bidis="0" inputs="0" outputs="1" signalRate="400.000000" toggleRate="0.000000" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="SDR" serdes="Yes" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_40_40" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.006749" vccoCurrent="0.005624" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="ddr4_dimm1_cs_n" count="1">
+					<GROUPSUMMARY>
+						<IO name="ddr4_dimm1_cs_n" clock="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/pll_clktoxphy[1]" clockFreq="1600.000000" ioStandard="SSTL12" bidis="0" inputs="0" outputs="1" signalRate="400.000000" toggleRate="0.000000" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="SDR" serdes="Yes" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_40_40" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.006749" vccoCurrent="0.005624" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="ddr4_dimm1_dm_n&lt;0:7&gt;" count="8">
+					<GROUPSUMMARY>
+						<IO name="ddr4_dimm1_dm_n&lt;0:7&gt;" clock="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/pll_clktoxphy[0]" clockFreq="1600.000000" ioStandard="POD12" bidis="8" inputs="0" outputs="0" signalRate="200.000000" toggleRate="0.000000" outputEnableRate="0.500000" outputLoad="0.000000" dataRate="DDR" serdes="Yes" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="RTT_40" outTerm="RDRV_40_40" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.019801" vcco="0.050766" vccoCurrent="0.042305" extTerm="FP_VCCO_50">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="ddr4_dimm1_dq&lt;0:63&gt;" count="64">
+					<GROUPSUMMARY>
+						<IO name="ddr4_dimm1_dq&lt;0:63&gt;" clock="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/pll_clktoxphy[2]" clockFreq="1600.000000" ioStandard="POD12" bidis="64" inputs="0" outputs="0" signalRate="200.000000" toggleRate="0.000000" outputEnableRate="0.500000" outputLoad="0.000000" dataRate="DDR" serdes="Yes" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="RTT_40" outTerm="RDRV_40_40" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.158409" vcco="0.406129" vccoCurrent="0.338441" extTerm="FP_VCCO_50">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="ddr4_dimm1_dqs_t&lt;0:7&gt;" count="8">
+					<GROUPSUMMARY>
+						<IO name="ddr4_dimm1_dqs_t&lt;0:7&gt;" clock="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/pll_clktoxphy[0]" clockFreq="1600.000000" ioStandard="DIFF_POD12" bidis="8" inputs="0" outputs="0" signalRate="200.000000" toggleRate="0.000000" outputEnableRate="0.500000" outputLoad="0.000000" dataRate="DDR" serdes="Yes" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="RTT_40" outTerm="RDRV_40_40" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.019801" vcco="0.139463" vccoCurrent="0.116219" extTerm="FP_VCCO_50">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="ddr4_dimm1_odt" count="1">
+					<GROUPSUMMARY>
+						<IO name="ddr4_dimm1_odt" clock="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/pll_clktoxphy[1]" clockFreq="1600.000000" ioStandard="SSTL12" bidis="0" inputs="0" outputs="1" signalRate="400.000000" toggleRate="0.000000" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="SDR" serdes="Yes" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_40_40" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.006749" vccoCurrent="0.005624" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="ddr4_dimm1_reset_n" count="1">
+					<GROUPSUMMARY>
+						<IO name="ddr4_dimm1_reset_n" clock="" clockFreq="0.000000" ioStandard="LVCMOS12_8_SLOW" bidis="0" inputs="0" outputs="1" signalRate="400.000000" toggleRate="0.000000" outputEnableRate="1.000000" outputLoad="0.000000" dataRate="Async" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="NONE" outTerm="RDRV_NONE_NONE" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.004689" vccoCurrent="0.003907" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="ddr4_dimm1_sma_clk_clk_p" count="1">
+					<GROUPSUMMARY>
+						<IO name="ddr4_dimm1_sma_clk_clk_p" clock="ddr4_dimm1_sma_clk_clk_p" clockFreq="200.000001" ioStandard="LVDS15" bidis="0" inputs="1" outputs="0" signalRate="400.000000" toggleRate="0.000000" dataRate="Clock" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="Yes" inTerm="RTT_NONE" outTerm="NONE" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.002520" vcco="0.000000" vccoCurrent="0.000000" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+				<MODULE name="reset_rtl" count="1">
+					<GROUPSUMMARY>
+						<IO name="reset_rtl" clock="" clockFreq="0.000000" ioStandard="UNDEFINED" bidis="0" inputs="1" outputs="0" signalRate="0.000000" toggleRate="0.000000" dataRate="Async" serdes="No" preEmphasis="No" ioDelay="No" ibufLowPower="No" inTerm="RTT_NONE" outTerm="NONE" numHD="1" ibufDisable="0.000000" dcitermDisable="0.000000" vccInt="0.000000" vccAux="0.000000" vcco="0.000000" vccoCurrent="0.000000" extTerm="NONE">
+						</IO>
+					</GROUPSUMMARY>
+				</MODULE>
+			</BLOCKTYPE>
+			<BLOCKTYPE name="NOC">
+				<BLOCKTYPE name="NOC">
+					<CLK clk_freq="1000.000000" used_clk_buffers="64" total_clk_buffers="64">
+					</CLK>
+					<PATH name="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_ddrmc_main" dataPath="PL-&gt;DDRC" read_bw="0.000000" write_bw="1968.000000" read_transaction_size="0.000000" write_transaction_size="128.000000" num_switches="8.000000" switch_length="12.000000" Vccint_soc="">
+					</PATH>
+					<PATH name="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_ddrmc_main" dataPath="PL-&gt;DDRC" read_bw="1750.000000" write_bw="0.000000" read_transaction_size="128.000000" write_transaction_size="0.000000" num_switches="7.000000" switch_length="10.500000" Vccint_soc="">
+					</PATH>
+					<PATH name="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_ddrmc_main" dataPath="PL-&gt;DDRC" read_bw="0.000000" write_bw="1968.000000" read_transaction_size="0.000000" write_transaction_size="128.000000" num_switches="9.000000" switch_length="13.500000" Vccint_soc="">
+					</PATH>
+					<PATH name="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_ddrmc_main" dataPath="PL-&gt;DDRC" read_bw="1750.000000" write_bw="0.000000" read_transaction_size="128.000000" write_transaction_size="0.000000" num_switches="6.000000" switch_length="9.000000" Vccint_soc="">
+					</PATH>
+					<PATH name="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_ddrmc_main" dataPath="PL-&gt;DDRC" read_bw="0.000000" write_bw="225.000000" read_transaction_size="0.000000" write_transaction_size="128.000000" num_switches="8.000000" switch_length="12.000000" Vccint_soc="">
+					</PATH>
+					<PATH name="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_ddrmc_main" dataPath="PL-&gt;DDRC" read_bw="200.000000" write_bw="0.000000" read_transaction_size="128.000000" write_transaction_size="0.000000" num_switches="7.000000" switch_length="10.500000" Vccint_soc="">
+					</PATH>
+					<PATH name="blkdsgn_i/axi_noc_0/inst/MC0_ddrc/inst/noc_ddr4_phy/inst/u_ddrmc_main" dataPath="PL-&gt;DDRC" read_bw="200.000000" write_bw="0.000000" read_transaction_size="128.000000" write_transaction_size="0.000000" num_switches="5.000000" switch_length="7.500000" Vccint_soc="">
+					</PATH>
+				</BLOCKTYPE>
+			</BLOCKTYPE>
+			<BLOCKTYPE name="HMC">
+				<HMC standard="DDR4_SDRAM" eccUsage="Disabled" channels="1" dataRate="3200.000000" dataWidth="64" totalDataWidth="64" readBandwidth="3900.000000" writeBandwidth="4161.000000" inputTermination="RTT_40" outputTermination="RDRV_40" Vcc_soc="0.181469">
+				</HMC>
+			</BLOCKTYPE>
+			<BLOCKTYPE name="IOBANK">
+				<IOBANK numInternalVref="0" numDelayControl="0" numLVDSBanks="1">
+				</IOBANK>
+			</BLOCKTYPE>
+		</BYTYPE>
+	</BLOCKDETAILS>
+</POWERDATA>
+

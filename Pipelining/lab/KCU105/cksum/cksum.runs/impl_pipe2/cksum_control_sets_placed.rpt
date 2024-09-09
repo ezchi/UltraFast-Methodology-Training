@@ -1,0 +1,87 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Fri Nov 25 23:20:37 2022
+| Host         : amd running 64-bit Ubuntu 20.04.5 LTS
+| Command      : report_control_sets -verbose -file cksum_control_sets_placed.rpt
+| Design       : cksum
+| Device       : xcku040
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |     9 |
+|    Minimum number of control sets                        |     9 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |     3 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |     9 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     9 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             225 |           49 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             128 |           50 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------+---------------------------+------------------+------------------+----------------+--------------+
+|        Clock Signal        |       Enable Signal       | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------------+---------------------------+------------------+------------------+----------------+--------------+
+|  clk_gen_inst/inst/clk_450 | L3LaneEn_reg1_reg_n_0_[0] | sop_reg0         |                9 |             16 |         1.78 |
+|  clk_gen_inst/inst/clk_450 | L3LaneEn_reg1_reg_n_0_[1] | sop_reg1         |               10 |             16 |         1.60 |
+|  clk_gen_inst/inst/clk_450 | L3LaneEn_reg1_reg_n_0_[3] | sop_reg3         |                6 |             16 |         2.67 |
+|  clk_gen_inst/inst/clk_450 | L3LaneEn_reg1_reg_n_0_[4] | sop_reg4         |                9 |             16 |         1.78 |
+|  clk_gen_inst/inst/clk_450 | L3LaneEn_reg1_reg_n_0_[5] | sop_reg5         |                9 |             16 |         1.78 |
+|  clk_gen_inst/inst/clk_450 | L3LaneEn_reg1_reg_n_0_[6] | sop_reg6         |                9 |             16 |         1.78 |
+|  clk_gen_inst/inst/clk_450 | L3LaneEn_reg1_reg_n_0_[7] | sop_reg7         |                7 |             16 |         2.29 |
+|  clk_gen_inst/inst/clk_450 | p_1_in                    | sop_reg2         |                9 |             16 |         1.78 |
+|  clk_gen_inst/inst/clk_450 |                           |                  |               49 |            226 |         4.61 |
++----------------------------+---------------------------+------------------+------------------+----------------+--------------+
+
+

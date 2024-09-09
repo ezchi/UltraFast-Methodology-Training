@@ -1,0 +1,327 @@
+
+*** Running vivado
+    with args -log uart_led.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source uart_led.tcl
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source uart_led.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1698.160 ; gain = 13.023 ; free physical = 10149 ; free virtual = 14100
+Command: synth_design -top uart_led -part xcku040-ffva1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku040'
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3026
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/amd/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2690.121 ; gain = 375.770 ; free physical = 9101 ; free virtual = 13053
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2036.737; parent = 1848.665; children = 188.072
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3685.188; parent = 2690.125; children = 995.062
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'uart_led' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_led.vhd:79]
+INFO: [Synth 8-113] binding component instance 'IBUF_rst_i0' to cell 'IBUF' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_led.vhd:134]
+INFO: [Synth 8-113] binding component instance 'IBUF_btn_i0' to cell 'IBUF' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_led.vhd:135]
+INFO: [Synth 8-113] binding component instance 'IBUF_rxd_i0' to cell 'IBUF' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_led.vhd:136]
+INFO: [Synth 8-113] binding component instance 'IBUFG_clk_i0' to cell 'IBUFGDS' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_led.vhd:137]
+INFO: [Synth 8-113] binding component instance 'BUFG_clk_rx_i0' to cell 'BUFG' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_led.vhd:142]
+INFO: [Synth 8-113] binding component instance 'OBUF_led_i' to cell 'OBUF' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_led.vhd:147]
+INFO: [Synth 8-113] binding component instance 'OBUF_led_i' to cell 'OBUF' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_led.vhd:147]
+INFO: [Synth 8-113] binding component instance 'OBUF_led_i' to cell 'OBUF' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_led.vhd:147]
+INFO: [Synth 8-113] binding component instance 'OBUF_led_i' to cell 'OBUF' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_led.vhd:147]
+INFO: [Synth 8-113] binding component instance 'OBUF_led_i' to cell 'OBUF' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_led.vhd:147]
+INFO: [Synth 8-113] binding component instance 'OBUF_led_i' to cell 'OBUF' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_led.vhd:147]
+INFO: [Synth 8-113] binding component instance 'OBUF_led_i' to cell 'OBUF' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_led.vhd:147]
+INFO: [Synth 8-113] binding component instance 'OBUF_led_i' to cell 'OBUF' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_led.vhd:147]
+INFO: [Synth 8-3491] module 'meta_harden' declared at '/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/meta_harden.vhd:61' bound to instance 'meta_harden_rst_i0' of component 'meta_harden' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_led.vhd:152]
+INFO: [Synth 8-638] synthesizing module 'meta_harden' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/meta_harden.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'meta_harden' (0#1) [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/meta_harden.vhd:69]
+INFO: [Synth 8-3491] module 'meta_harden' declared at '/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/meta_harden.vhd:61' bound to instance 'meta_harden_btn_i0' of component 'meta_harden' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_led.vhd:156]
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+	Parameter CLOCK_RATE bound to: 125000000 - type: integer 
+INFO: [Synth 8-3491] module 'uart_rx' declared at '/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_rx.vhd:76' bound to instance 'uart_rx_i0' of component 'uart_rx' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_led.vhd:161]
+INFO: [Synth 8-638] synthesizing module 'uart_rx' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_rx.vhd:92]
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+	Parameter CLOCK_RATE bound to: 125000000 - type: integer 
+INFO: [Synth 8-3491] module 'meta_harden' declared at '/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/meta_harden.vhd:61' bound to instance 'meta_harden_rxd_i0' of component 'meta_harden' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_rx.vhd:101]
+	Parameter CLOCK_RATE bound to: 125000000 - type: integer 
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+INFO: [Synth 8-3491] module 'uart_baud_gen' declared at '/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_baud_gen.vhd:66' bound to instance 'uart_baud_gen_rx_i0' of component 'uart_baud_gen' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_rx.vhd:112]
+INFO: [Synth 8-638] synthesizing module 'uart_baud_gen' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_baud_gen.vhd:77]
+	Parameter CLOCK_RATE bound to: 125000000 - type: integer 
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'uart_baud_gen' (0#1) [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_baud_gen.vhd:77]
+INFO: [Synth 8-3491] module 'uart_rx_ctl' declared at '/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_rx_ctl.vhd:90' bound to instance 'uart_rx_ctl_i0' of component 'uart_rx_ctl' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_rx.vhd:122]
+INFO: [Synth 8-638] synthesizing module 'uart_rx_ctl' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_rx_ctl.vhd:102]
+INFO: [Synth 8-226] default block is never used [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_rx_ctl.vhd:121]
+INFO: [Synth 8-256] done synthesizing module 'uart_rx_ctl' (0#1) [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_rx_ctl.vhd:102]
+INFO: [Synth 8-256] done synthesizing module 'uart_rx' (0#1) [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_rx.vhd:92]
+INFO: [Synth 8-3491] module 'led_ctl' declared at '/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/led_ctl.vhd:25' bound to instance 'led_ctl_i0' of component 'led_ctl' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_led.vhd:178]
+INFO: [Synth 8-638] synthesizing module 'led_ctl' [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/led_ctl.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'led_ctl' (0#1) [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/led_ctl.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'uart_led' (0#1) [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/sources_1/imports/uart_led.vhd:79]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2758.090 ; gain = 443.738 ; free physical = 9186 ; free virtual = 13139
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2036.737; parent = 1848.665; children = 188.072
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3753.156; parent = 2758.094; children = 995.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2775.902 ; gain = 461.551 ; free physical = 9186 ; free virtual = 13139
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2036.737; parent = 1848.665; children = 188.072
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3770.969; parent = 2775.906; children = 995.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2775.902 ; gain = 461.551 ; free physical = 9186 ; free virtual = 13138
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2036.737; parent = 1848.665; children = 188.072
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3770.969; parent = 2775.906; children = 995.062
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2781.840 ; gain = 0.000 ; free physical = 9173 ; free virtual = 13126
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/constrs_1/imports/uart_led_Baselining.xdc]
+Finished Parsing XDC File [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/constrs_1/imports/uart_led_Baselining.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.srcs/constrs_1/imports/uart_led_Baselining.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/uart_led_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/uart_led_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2901.605 ; gain = 0.000 ; free physical = 9136 ; free virtual = 13088
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 3 instances
+  IBUFGDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2901.605 ; gain = 0.000 ; free physical = 9136 ; free virtual = 13088
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/opt/amd/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2901.605 ; gain = 587.254 ; free physical = 9167 ; free virtual = 13119
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2036.737; parent = 1848.665; children = 188.072
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3896.672; parent = 2901.609; children = 995.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku040-ffva1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2901.605 ; gain = 587.254 ; free physical = 9167 ; free virtual = 13119
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2036.737; parent = 1848.665; children = 188.072
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3896.672; parent = 2901.609; children = 995.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2901.605 ; gain = 587.254 ; free physical = 9167 ; free virtual = 13119
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2036.737; parent = 1848.665; children = 188.072
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3896.672; parent = 2901.609; children = 995.062
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx_ctl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                               00 |                               00
+                  iSTATE |                               01 |                               01
+                 iSTATE0 |                               10 |                               10
+                 iSTATE2 |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_rx_ctl'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2901.605 ; gain = 587.254 ; free physical = 9153 ; free virtual = 13106
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2036.737; parent = 1848.665; children = 188.072
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3896.672; parent = 2901.609; children = 995.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 2     
++---Registers : 
+	                8 Bit    Registers := 3     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input    8 Bit        Muxes := 3     
+	   2 Input    4 Bit        Muxes := 1     
+	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 3     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 9     
+	   4 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1920 (col length:120)
+BRAMs: 1200 (col length: RAMB18 120 RAMB36 60)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2901.605 ; gain = 587.254 ; free physical = 9140 ; free virtual = 13097
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2036.737; parent = 1848.665; children = 188.072
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3896.672; parent = 2901.609; children = 995.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2912.207 ; gain = 597.855 ; free physical = 8909 ; free virtual = 12865
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2240.806; parent = 2053.497; children = 188.072
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3907.273; parent = 2912.211; children = 995.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2912.207 ; gain = 597.855 ; free physical = 8909 ; free virtual = 12865
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2240.896; parent = 2053.587; children = 188.072
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3907.273; parent = 2912.211; children = 995.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2912.207 ; gain = 597.855 ; free physical = 8893 ; free virtual = 12850
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2241.599; parent = 2054.290; children = 188.072
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3907.273; parent = 2912.211; children = 995.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2915.176 ; gain = 600.824 ; free physical = 8892 ; free virtual = 12849
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2241.778; parent = 2054.470; children = 188.072
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3910.242; parent = 2915.180; children = 995.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2915.176 ; gain = 600.824 ; free physical = 8892 ; free virtual = 12849
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2241.794; parent = 2054.485; children = 188.072
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3910.242; parent = 2915.180; children = 995.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2915.176 ; gain = 600.824 ; free physical = 8892 ; free virtual = 12849
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2241.810; parent = 2054.501; children = 188.072
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3910.242; parent = 2915.180; children = 995.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2915.176 ; gain = 600.824 ; free physical = 8892 ; free virtual = 12849
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2241.810; parent = 2054.501; children = 188.072
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3910.242; parent = 2915.180; children = 995.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2915.176 ; gain = 600.824 ; free physical = 8892 ; free virtual = 12849
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2241.810; parent = 2054.501; children = 188.072
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3910.242; parent = 2915.180; children = 995.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2915.176 ; gain = 600.824 ; free physical = 8892 ; free virtual = 12849
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2241.825; parent = 2054.517; children = 188.072
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3910.242; parent = 2915.180; children = 995.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |LUT1    |     2|
+|3     |LUT2    |    10|
+|4     |LUT3    |    14|
+|5     |LUT4    |    11|
+|6     |LUT5    |     6|
+|7     |LUT6    |    14|
+|8     |FDRE    |    47|
+|9     |FDSE    |     6|
+|10    |IBUF    |     3|
+|11    |IBUFGDS |     1|
+|12    |OBUF    |     8|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2915.176 ; gain = 600.824 ; free physical = 8892 ; free virtual = 12849
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2241.872; parent = 2054.563; children = 188.072
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3910.242; parent = 2915.180; children = 995.062
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2915.176 ; gain = 475.121 ; free physical = 8913 ; free virtual = 12870
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2915.184 ; gain = 600.824 ; free physical = 8913 ; free virtual = 12870
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2915.184 ; gain = 0.000 ; free physical = 8913 ; free virtual = 12870
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2949.863 ; gain = 0.000 ; free physical = 8963 ; free virtual = 12919
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  IBUF => IBUF (IBUFCTRL, INBUF): 3 instances
+  IBUFGDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+
+Synth Design complete, checksum: b9b84860
+INFO: [Common 17-83] Releasing license: Synthesis
+55 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 2949.863 ; gain = 1251.703 ; free physical = 9165 ; free virtual = 13122
+INFO: [Common 17-1381] The checkpoint '/home/amd/training/Baselining/lab/KCU105/vhdl/uart_led.runs/synth_1/uart_led.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file uart_led_utilization_synth.rpt -pb uart_led_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 25 23:02:48 2022...

@@ -1,0 +1,131 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Sun Nov 27 07:53:21 2022
+| Host         : amd running 64-bit Ubuntu 20.04.5 LTS
+| Command      : report_methodology -file cksum_methodology_drc_routed.rpt -pb cksum_methodology_drc_routed.pb -rpx cksum_methodology_drc_routed.rpx
+| Design       : cksum
+| Device       : xcku040-ffva1156-2-e
+| Speed File   : -2
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 18
++-----------+----------+--------------------------------------------------------+------------+
+| Rule      | Severity | Description                                            | Violations |
++-----------+----------+--------------------------------------------------------+------------+
+| TIMING-16 | Warning  | Large setup violation                                  | 16         |
+| XDCC-1    | Warning  | Scoped Clock constraint overwritten with the same name | 1          |
+| XDCC-7    | Warning  | Scoped Clock constraint overwritten on the same source | 1          |
++-----------+----------+--------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.571 ns between L3Chksum1_reg[0]/C (clocked by clk_450_clk_gen) and L3ChksumFinal_reg[7]/D (clocked by clk_450_clk_gen). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.620 ns between L3Chksum1_reg[0]/C (clocked by clk_450_clk_gen) and L3ChksumFinal_reg[6]/D (clocked by clk_450_clk_gen). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -1.621 ns between L3Chksum1_reg[0]/C (clocked by clk_450_clk_gen) and L3ChksumFinal_reg[2]/D (clocked by clk_450_clk_gen). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -1.626 ns between L3Chksum1_reg[0]/C (clocked by clk_450_clk_gen) and L3ChksumFinal_reg[0]/D (clocked by clk_450_clk_gen). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -1.628 ns between L3Chksum1_reg[0]/C (clocked by clk_450_clk_gen) and L3ChksumFinal_reg[1]/D (clocked by clk_450_clk_gen). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -1.628 ns between L3Chksum1_reg[0]/C (clocked by clk_450_clk_gen) and L3ChksumFinal_reg[5]/D (clocked by clk_450_clk_gen). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -1.692 ns between L3Chksum1_reg[0]/C (clocked by clk_450_clk_gen) and L3ChksumFinal_reg[10]/D (clocked by clk_450_clk_gen). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -1.696 ns between L3Chksum1_reg[0]/C (clocked by clk_450_clk_gen) and L3ChksumFinal_reg[4]/D (clocked by clk_450_clk_gen). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -1.702 ns between L3Chksum1_reg[0]/C (clocked by clk_450_clk_gen) and L3ChksumFinal_reg[12]/D (clocked by clk_450_clk_gen). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -1.705 ns between L3Chksum1_reg[0]/C (clocked by clk_450_clk_gen) and L3ChksumFinal_reg[13]/D (clocked by clk_450_clk_gen). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -1.731 ns between L3Chksum1_reg[0]/C (clocked by clk_450_clk_gen) and L3ChksumFinal_reg[11]/D (clocked by clk_450_clk_gen). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -1.738 ns between L3Chksum1_reg[0]/C (clocked by clk_450_clk_gen) and L3ChksumFinal_reg[8]/D (clocked by clk_450_clk_gen). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -1.752 ns between L3Chksum1_reg[0]/C (clocked by clk_450_clk_gen) and L3ChksumFinal_reg[15]/D (clocked by clk_450_clk_gen). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -1.768 ns between L3Chksum1_reg[0]/C (clocked by clk_450_clk_gen) and L3ChksumFinal_reg[3]/D (clocked by clk_450_clk_gen). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -1.803 ns between L3Chksum1_reg[0]/C (clocked by clk_450_clk_gen) and L3ChksumFinal_reg[14]/D (clocked by clk_450_clk_gen). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -1.824 ns between L3Chksum1_reg[0]/C (clocked by clk_450_clk_gen) and L3ChksumFinal_reg[9]/D (clocked by clk_450_clk_gen). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+XDCC-1#1 Warning
+Scoped Clock constraint overwritten with the same name  
+A new clock constraint create_clock overrides a previous scoped clock constraint with the same name. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 10.000 -name SysClk_in [get_ports SysClk_in] (Source: /media/sf_training/SP/Pipelining/lab/KCU105/cksum/cksum.srcs/constrs_1/imports/support/cksum.xdc (Line: 1))
+Previous: create_clock -period 10.000 [get_ports SysClk_in] (Source: /media/sf_training/SP/Pipelining/lab/KCU105/cksum/cksum.gen/sources_1/ip/clk_gen/clk_gen.xdc (Line: 56))
+Related violations: <none>
+
+XDCC-7#1 Warning
+Scoped Clock constraint overwritten on the same source  
+A new clock constraint create_clock overrides a previous scoped clock constraint defined on the same source. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 10.000 -name SysClk_in [get_ports SysClk_in] (Source: /media/sf_training/SP/Pipelining/lab/KCU105/cksum/cksum.srcs/constrs_1/imports/support/cksum.xdc (Line: 1))
+Previous: create_clock -period 10.000 [get_ports SysClk_in] (Source: /media/sf_training/SP/Pipelining/lab/KCU105/cksum/cksum.gen/sources_1/ip/clk_gen/clk_gen.xdc (Line: 56))
+Related violations: <none>
+
+

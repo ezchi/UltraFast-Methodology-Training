@@ -1,0 +1,25 @@
+###########################################################################
+## IO_PinPlanning SP Script
+#
+#   REQUIRES:
+#      connection to SVN
+#
+#   Copies files from the SVN to the training directory and builds the 
+#   starting point project for the student
+#
+#   History:
+#      10 May 2019 - NK - 2019.1 initial build
+##
+###########################################################################
+
+# load the standard helper file
+source home/xilinx/training/completer_helper_script/helper.tcl
+source home/xilinx/training/completer_helper_script/completer_helper.tcl
+
+# project constants
+set verbose 	1
+set tcName    IO_PinPlanning
+set demoOrLab 	lab
+
+# Copies SVN sources to training directory
+#file copy /media/sf_trunk/FPGA/TopicClusters/$tcName $trainingPath/training

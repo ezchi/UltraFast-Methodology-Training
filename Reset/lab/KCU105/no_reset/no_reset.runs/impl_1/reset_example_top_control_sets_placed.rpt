@@ -1,0 +1,144 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Sun Nov 27 10:48:02 2022
+| Host         : amd running 64-bit Ubuntu 20.04.5 LTS
+| Command      : report_control_sets -verbose -file reset_example_top_control_sets_placed.rpt
+| Design       : reset_example_top
+| Device       : xcku040
+----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    66 |
+|    Minimum number of control sets                        |    66 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |     3 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    66 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    66 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |            4161 |          485 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              64 |           62 |
+| Yes          | No                    | No                     |            4096 |          512 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------+------------------------------------+------------------+------------------+----------------+--------------+
+|           Clock Signal          |            Enable Signal           | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------------------+------------------------------------+------------------+------------------+----------------+--------------+
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[46].count[46][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[53].count[53][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[52].count[52][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[51].count[51][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[50].count[50][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[4].count[4][0]_i_1_n_0   |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[49].count[49][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[48].count[48][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[47].count[47][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[54].count[54][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[45].count[45][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[44].count[44][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[43].count[43][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[42].count[42][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[41].count[41][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[40].count[40][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[3].count[3][0]_i_1_n_0   |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[39].count[39][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[55].count[55][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[56].count[56][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[57].count[57][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[58].count[58][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[59].count[59][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[5].count[5][0]_i_1_n_0   |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[60].count[60][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[61].count[61][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[62].count[62][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[63].count[63][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[6].count[6][0]_i_1_n_0   |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[7].count[7][0]_i_1_n_0   |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[8].count[8][0]_i_1_n_0   |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[9].count[9][0]_i_1_n_0   |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | sel                                |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[16].count[16][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[23].count[23][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[22].count[22][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[21].count[21][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[20].count[20][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[1].count[1][0]_i_1_n_0   |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[19].count[19][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[18].count[18][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[17].count[17][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[24].count[24][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[15].count[15][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[14].count[14][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[13].count[13][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[12].count[12][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[11].count[11][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[10].count[10][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 |                                    | sload_in         |               62 |             64 |         1.03 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[25].count[25][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[26].count[26][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[27].count[27][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[28].count[28][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[29].count[29][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[2].count[2][0]_i_1_n_0   |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[30].count[30][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[31].count[31][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[32].count[32][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[33].count[33][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[34].count[34][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[35].count[35][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[36].count[36][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[37].count[37][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 | cntr_inst[38].count[38][0]_i_1_n_0 |                  |                8 |             64 |         8.00 |
+|  mmcm_clocks_inst/inst/clk_out1 |                                    |                  |              485 |           4161 |         8.58 |
++---------------------------------+------------------------------------+------------------+------------------+----------------+--------------+
+
+

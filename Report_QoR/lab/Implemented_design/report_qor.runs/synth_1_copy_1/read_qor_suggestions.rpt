@@ -1,0 +1,94 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
+| Date         : Fri Jul  8 07:36:11 2022
+| Host         : xilinx running 64-bit Ubuntu 20.04.3 LTS
+| Command      : report_qor_suggestions -of_objects {RQS_CLOCK-9-1 RQS_TIMING-7_2-1 RQS_TIMING-44_2-1 RQS_TIMING-33_2-1 RQS_NETLIST-19-1 RQS_XDC-1-1 RQS_NETLIST-10-1} -file read_qor_suggestions.rpt -quiet
+| Design       : top
+| Device       : xqvu3p
+| Design State : Synthesized
+| ML Models    : v2020.1.0
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report QoR Suggestions
+
+Table of Contents
+-----------------
+1. QoR Suggestions Report Summary
+2. ML Strategies
+3. QoR Suggestions - Timing
+4. QoR Suggestions - Clocking
+5. QoR Suggestions - XDC
+6. QoR Suggestions - Netlist
+
+1. QoR Suggestions Report Summary
+---------------------------------
+
++-------------------+-----------------+----------+--------------+----------------+-----------+-------------+----------------------+------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
+|        Name       |        Id       |  Status  | Generated At | Applicable For | Automatic |    Scope    | Incremental Friendly |                                        Description                                       |                                                 Source                                                 |
++-------------------+-----------------+----------+--------------+----------------+-----------+-------------+----------------------+------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
+| RQS_CLOCK-9-1     | RQS_CLOCK-9     | Existing | synth_design | place_design   | Yes       | GLOBALSCOPE | Yes                  | Sub optimal Fvco on MMCM/PLL. Update MMCM/PLL settings to improve the jitter.            | /home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/utils_1/imports/impl_1/rqs_report.rqs |
+| RQS_XDC-1-1       | RQS_XDC-1       | Existing | synth_design | synth_design   | No        | GLOBALSCOPE | No                   | Paths above Max Net/LUT budgeting. Review paths and either reduce logic delays, add      | /home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/utils_1/imports/impl_1/rqs_report.rqs |
+|                   |                 |          |              |                |           |             |                      | pipelining or increase path requirements.                                                |                                                                                                        |
+| RQS_TIMING-7_2-1  | RQS_TIMING-7_2  | Applied  | synth_design | synth_design   | Yes       | GLOBALSCOPE | No                   | SRLs in critical paths. Map SRLs into registers using SRL_STYLE=REGISTERS property.      | /home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/utils_1/imports/impl_1/rqs_report.rqs |
+| RQS_TIMING-44_2-1 | RQS_TIMING-44_2 | Applied  | synth_design | synth_design   | Yes       | GLOBALSCOPE | No                   | Improve timing on critical path using RETIMING_BACKWARD property.                        | /home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/utils_1/imports/impl_1/rqs_report.rqs |
+| RQS_TIMING-33_2-1 | RQS_TIMING-33_2 | Applied  | synth_design | synth_design   | Yes       | GLOBALSCOPE | No                   | Improve timing on critical path using RETIMING_FORWARD property.                         | /home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/utils_1/imports/impl_1/rqs_report.rqs |
+| RQS_NETLIST-19-1  | RQS_NETLIST-19  | Applied  | synth_design | synth_design   | Yes       | GLOBALSCOPE | No                   | Retime across high fanout nets to improve timing.                                        | /home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/utils_1/imports/impl_1/rqs_report.rqs |
+| RQS_NETLIST-10-1  | RQS_NETLIST-10  | Applied  | synth_design | synth_design   | Yes       | GLOBALSCOPE | No                   | Rebalance timing paths by forward and backward retiming.                                 | /home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/utils_1/imports/impl_1/rqs_report.rqs |
++-------------------+-----------------+----------+--------------+----------------+-----------+-------------+----------------------+------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+
+* By default the number of failing paths is limited to 100. Use the -max_paths options to override.
+** The design checks report may change until design is completely implemented/routed
+
+
+2. ML Strategies
+----------------
+
++---+----+---------+---------+
+| # | Id | Command | Options |
++---+----+---------+---------+
+* ML Strategies are available only in default/explore at successfully routed design.
+** The design is not compatible for suggesting strategy, as it was not run using vivado implementation default or vivado implementation explore strategy.
+
+
+3. QoR Suggestions - Timing
+---------------------------
+
++-------------------+-------------+--------------+--------+--------+-------+--------+--------+----------------+-------+--------+-------------------+-------------------+--------------------------------------------------+------------------------------------------------------------+
+|        Name       | No of Paths | Logic Levels | Routes |  Slack |  Req. |  Skew  | Fanout | Datapath Delay | Cell% | Route% |    Source Clock   | Destination Clock |                    Startpoint                    |                          Endpoint                          |
++-------------------+-------------+--------------+--------+--------+-------+--------+--------+----------------+-------+--------+-------------------+-------------------+--------------------------------------------------+------------------------------------------------------------+
+| RQS_TIMING-7_2-1  | 1           | 5            | 6      | -0.729 | 1.667 | -0.145 | -      | 2.090          | 51.40 | 48.60  | clk_600_clk_wiz_0 | clk_600_clk_wiz_0 | clk300_to_clk600_ffs_i/expanded_sig3_reg[1932]/C | clk300_to_clk600_ffs_i/bit_reducer_i/data_out_i_reg_srl2/D |
+| RQS_TIMING-44_2-1 | 1           | 5            | 6      | -0.396 | 1.667 | -0.145 | -      | 1.902          | 56.50 | 43.50  | clk_600_clk_wiz_0 | clk_600_clk_wiz_0 | clk300_to_clk600_ffs_i/expanded_sig3_reg[1932]/C | clk300_to_clk600_ffs_i/bit_reducer_i/tmp_r_reg/D           |
+| RQS_TIMING-33_2-1 | 1           | 5            | 6      | -0.396 | 1.667 | -0.145 | -      | 1.902          | 56.50 | 43.50  | clk_600_clk_wiz_0 | clk_600_clk_wiz_0 | clk300_to_clk600_ffs_i/expanded_sig3_reg[1932]/C | clk300_to_clk600_ffs_i/bit_reducer_i/tmp_r_reg/D           |
++-------------------+-------------+--------------+--------+--------+-------+--------+--------+----------------+-------+--------+-------------------+-------------------+--------------------------------------------------+------------------------------------------------------------+
+
+
+4. QoR Suggestions - Clocking
+-----------------------------
+
++---------------+-----------+--------+--------+-------+----------------+-------+--------+-------------------+-------------------+---------------------------------------+---------------------------------------+--------------------------------------------------+--------------------------------------------------+
+|      Name     | Path Type |  Skew  |  Slack |  Req. | Datapath Delay | Cell% | Route% |    Source Clock   | Destination Clock |         Source Clock Topology         |       Destination Clock Topology      |                    Startpoint                    |                     Endpoint                     |
++---------------+-----------+--------+--------+-------+----------------+-------+--------+-------------------+-------------------+---------------------------------------+---------------------------------------+--------------------------------------------------+--------------------------------------------------+
+| RQS_CLOCK-9-1 | SETUP     | -0.145 | -0.396 | 1.667 | 1.902          | 56.50 | 43.50  | clk_600_clk_wiz_0 | clk_600_clk_wiz_0 | INBUF IBUFCTRL MMCME4_ADV BUFGCE FDRE | INBUF IBUFCTRL MMCME4_ADV BUFGCE FDRE | clk300_to_clk600_ffs_i/expanded_sig3_reg[1932]/C | clk300_to_clk600_ffs_i/bit_reducer_i/tmp_r_reg/D |
++---------------+-----------+--------+--------+-------+----------------+-------+--------+-------------------+-------------------+---------------------------------------+---------------------------------------+--------------------------------------------------+--------------------------------------------------+
+
+
+5. QoR Suggestions - XDC
+------------------------
+
++------+-------------+--------------+--------+-------+------+------+----------------+-------+--------+--------------+-------------------+------------+----------+---------------------------+---------------------------+-----------------+-----------------+
+| Name | No of Paths | Logic Levels | Routes | Slack | Req. | Skew | Datapath Delay | Cell% | Route% | Source Clock | Destination Clock | Startpoint | Endpoint | Path budget for Net check | Path budget for Lut check | Net check slack | LUT check slack |
++------+-------------+--------------+--------+-------+------+------+----------------+-------+--------+--------------+-------------------+------------+----------+---------------------------+---------------------------+-----------------+-----------------+
+
+
+6. QoR Suggestions - Netlist
+----------------------------
+
++------------------+-------------+--------------+--------+--------+-------+--------+--------+----------------+-------+--------+-------------------+-------------------+--------------------------------------------------+--------------------------------------------------+
+|       Name       | No of Paths | Logic Levels | Routes |  Slack |  Req. |  Skew  | Fanout | Datapath Delay | Cell% | Route% |    Source Clock   | Destination Clock |                    Startpoint                    |                     Endpoint                     |
++------------------+-------------+--------------+--------+--------+-------+--------+--------+----------------+-------+--------+-------------------+-------------------+--------------------------------------------------+--------------------------------------------------+
+| RQS_NETLIST-19-1 | 1           | 1            | 2      | 2.355  | 3.333 | -0.145 | 2000   | 0.688          | 28.50 | 71.50  | clk_300_clk_wiz_0 | clk_300_clk_wiz_0 | clk300_to_clk600_ffs_i/a1_2r_reg/C               | clk300_to_clk600_ffs_i/expanded_sig1_reg[0]/CE   |
+|                  | 1           | 1            | 2      | 0.694  | 1.667 | -0.145 | 2000   | 0.688          | 28.50 | 71.50  | clk_600_clk_wiz_0 | clk_600_clk_wiz_0 | clk600_to_clk300_ffs_i/a1_2r_reg/C               | clk600_to_clk300_ffs_i/expanded_sig1_reg[0]/CE   |
+| RQS_NETLIST-10-1 | 1           | 5            | 6      | -0.396 | 1.667 | -0.145 | -      | 1.902          | 56.50 | 43.50  | clk_600_clk_wiz_0 | clk_600_clk_wiz_0 | clk300_to_clk600_ffs_i/expanded_sig3_reg[1932]/C | clk300_to_clk600_ffs_i/bit_reducer_i/tmp_r_reg/D |
++------------------+-------------+--------------+--------+--------+-------+--------+--------+----------------+-------+--------+-------------------+-------------------+--------------------------------------------------+--------------------------------------------------+
+
+

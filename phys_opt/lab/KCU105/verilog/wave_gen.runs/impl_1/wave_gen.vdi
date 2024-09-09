@@ -1,0 +1,648 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Nov 30 13:11:28 2022
+# Process ID: 27372
+# Current directory: /home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.runs/impl_1
+# Command line: vivado -log wave_gen.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source wave_gen.tcl -notrace
+# Log file: /home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.runs/impl_1/wave_gen.vdi
+# Journal file: /home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.runs/impl_1/vivado.jou
+# Running On: amd, OS: Linux, CPU Frequency: 2807.998 MHz, CPU Physical cores: 4, Host memory: 16778 MB
+#-----------------------------------------------------------
+source wave_gen.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1698.312 ; gain = 39.023 ; free physical = 9807 ; free virtual = 15081
+Command: link_design -top wave_gen -part xcku040-ffva1156-2-e
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xcku040-ffva1156-2-e
+INFO: [Project 1-454] Reading design checkpoint '/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.gen/sources_1/ip/char_fifo_phys_opt/char_fifo_phys_opt.dcp' for cell 'char_fifo_i0'
+INFO: [Project 1-454] Reading design checkpoint '/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.gen/sources_1/ip/clk_core_phys_opt/clk_core_phys_opt.dcp' for cell 'clk_gen_i0/clk_core_i0'
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2347.125 ; gain = 0.000 ; free physical = 9201 ; free virtual = 14476
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.gen/sources_1/ip/char_fifo_phys_opt/char_fifo_phys_opt.xdc] for cell 'char_fifo_i0/U0'
+Finished Parsing XDC File [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.gen/sources_1/ip/char_fifo_phys_opt/char_fifo_phys_opt.xdc] for cell 'char_fifo_i0/U0'
+Parsing XDC File [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.gen/sources_1/ip/clk_core_phys_opt/clk_core_phys_opt_board.xdc] for cell 'clk_gen_i0/clk_core_i0/inst'
+Finished Parsing XDC File [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.gen/sources_1/ip/clk_core_phys_opt/clk_core_phys_opt_board.xdc] for cell 'clk_gen_i0/clk_core_i0/inst'
+Parsing XDC File [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.gen/sources_1/ip/clk_core_phys_opt/clk_core_phys_opt.xdc] for cell 'clk_gen_i0/clk_core_i0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.gen/sources_1/ip/clk_core_phys_opt/clk_core_phys_opt.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.gen/sources_1/ip/clk_core_phys_opt/clk_core_phys_opt.xdc:57]
+Finished Parsing XDC File [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.gen/sources_1/ip/clk_core_phys_opt/clk_core_phys_opt.xdc] for cell 'clk_gen_i0/clk_core_i0/inst'
+Parsing XDC File [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc]
+WARNING: [Constraints 18-619] A clock with name 'clk_pin_p' already exists, overwriting the previous clock with the same name. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:2]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk_tx_virtual' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:9]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk_rx_virtual' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:14]
+INFO: [Timing 38-2] Deriving generated clocks [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:38]
+INFO: [Vivado 12-2286] Implicit search of objects for pattern 'clkx_nsamp_i0/meta_harden_bus_new_i0/signal_meta_reg' matched to 'cell' objects. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:38]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern 'clkx_nsamp_i0/meta_harden_bus_new_i0/signal_dst_reg' matched to 'cell' objects. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:38]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern 'clkx_pre_i0/meta_harden_bus_new_i0/signal_meta_reg' matched to 'cell' objects. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:39]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern 'clkx_pre_i0/meta_harden_bus_new_i0/signal_dst_reg' matched to 'cell' objects. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:39]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern 'clkx_spd_i0/meta_harden_bus_new_i0/signal_meta_reg' matched to 'cell' objects. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:40]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern 'clkx_spd_i0/meta_harden_bus_new_i0/signal_dst_reg' matched to 'cell' objects. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:40]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern 'lb_ctl_i0/debouncer_i0/meta_harden_signal_in_i0/signal_meta_reg' matched to 'cell' objects. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:41]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern 'lb_ctl_i0/debouncer_i0/meta_harden_signal_in_i0/signal_dst_reg' matched to 'cell' objects. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:41]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern 'samp_gen_i0/meta_harden_samp_gen_go_i0/signal_meta_reg' matched to 'cell' objects. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:42]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern 'samp_gen_i0/meta_harden_samp_gen_go_i0/signal_dst_reg' matched to 'cell' objects. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:42]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern 'uart_rx_i0/meta_harden_rxd_i0/signal_meta_reg' matched to 'cell' objects. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:43]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern 'uart_rx_i0/meta_harden_rxd_i0/signal_dst_reg' matched to 'cell' objects. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:43]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern 'rst_gen_i0/reset_bridge_clk_rx_i0/rst_meta_reg' matched to 'cell' objects. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:45]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern 'rst_gen_i0/reset_bridge_clk_rx_i0/rst_dst_reg' matched to 'cell' objects. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:45]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern 'rst_gen_i0/reset_bridge_clk_tx_i0/rst_meta_reg' matched to 'cell' objects. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:46]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern 'rst_gen_i0/reset_bridge_clk_tx_i0/rst_dst_reg' matched to 'cell' objects. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:46]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern 'rst_gen_i0/reset_bridge_clk_samp_i0/rst_meta_reg' matched to 'cell' objects. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:47]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+INFO: [Vivado 12-2286] Implicit search of objects for pattern 'rst_gen_i0/reset_bridge_clk_samp_i0/rst_dst_reg' matched to 'cell' objects. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:47]
+Resolution: To avoid ambiguous patterns, provide proper objects using get commands e.g. [get_nets xyz].
+WARNING: [Vivado 12-627] No clocks matched 'clk_out2_clk_core'. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:58]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:58]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_uncertainty:No valid object(s) found for '-to [get_clocks clk_out2_clk_core]'. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:58]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'clk_out2_clk_core'. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:59]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:59]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_uncertainty:No valid object(s) found for '-from [get_clocks clk_out2_clk_core]'. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:59]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc]
+Parsing XDC File [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.gen/sources_1/ip/char_fifo_phys_opt/char_fifo_phys_opt_clocks.xdc] for cell 'char_fifo_i0/U0'
+Finished Parsing XDC File [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.gen/sources_1/ip/char_fifo_phys_opt/char_fifo_phys_opt_clocks.xdc] for cell 'char_fifo_i0/U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2691.488 ; gain = 0.000 ; free physical = 9008 ; free virtual = 14283
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 3 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
+
+34 Infos, 3 Warnings, 2 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2691.488 ; gain = 924.910 ; free physical = 9008 ; free virtual = 14283
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku040'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2768.258 ; gain = 0.000 ; free physical = 8959 ; free virtual = 14233
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: caf9cc31
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2768.258 ; gain = 0.000 ; free physical = 8959 ; free virtual = 14233
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk_tx_virtual' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:9]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk_rx_virtual' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:14]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2768.258 ; gain = 0.000 ; free physical = 8959 ; free virtual = 14233
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk_tx_virtual' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:9]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk_rx_virtual' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:14]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 141f90656
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 3624.914 ; gain = 856.656 ; free physical = 8472 ; free virtual = 13746
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 19e4f472e
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 3627.926 ; gain = 859.668 ; free physical = 8440 ; free virtual = 13715
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 19e4f472e
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 3627.926 ; gain = 859.668 ; free physical = 8440 ; free virtual = 13715
+Phase 1 Placer Initialization | Checksum: 19e4f472e
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 3627.926 ; gain = 859.668 ; free physical = 8440 ; free virtual = 13715
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1e60388d1
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 3627.926 ; gain = 859.668 ; free physical = 8440 ; free virtual = 13714
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 232f12dcd
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 3627.926 ; gain = 859.668 ; free physical = 8439 ; free virtual = 13714
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 232f12dcd
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 3627.926 ; gain = 859.668 ; free physical = 8439 ; free virtual = 13714
+
+Phase 2.4 Global Placement Core
+
+Phase 2.4.1 UpdateTiming Before Physical Synthesis
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 1a2554fa1
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:30 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8377 ; free virtual = 13651
+
+Phase 2.4.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 28 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 13 nets or LUTs. Breaked 0 LUT, combined 13 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3638.941 ; gain = 0.000 ; free physical = 8377 ; free virtual = 13651
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |             13  |                    13  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |             13  |                    13  |           0  |           9  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: 1339b799b
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:31 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8377 ; free virtual = 13651
+Phase 2.4 Global Placement Core | Checksum: 15ac4b6f6
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:31 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8378 ; free virtual = 13652
+Phase 2 Global Placement | Checksum: 15ac4b6f6
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:31 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8378 ; free virtual = 13652
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: fddd05c1
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:31 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8378 ; free virtual = 13652
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: e0372745
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:31 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8378 ; free virtual = 13652
+
+Phase 3.3 Small Shape DP
+
+Phase 3.3.1 Small Shape Clustering
+Phase 3.3.1 Small Shape Clustering | Checksum: 127c4d09f
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:32 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8374 ; free virtual = 13648
+
+Phase 3.3.2 DP Optimization
+Phase 3.3.2 DP Optimization | Checksum: b51e1756
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:32 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8363 ; free virtual = 13637
+
+Phase 3.3.3 Flow Legalize Slice Clusters
+Phase 3.3.3 Flow Legalize Slice Clusters | Checksum: fda3e8fa
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:32 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8364 ; free virtual = 13638
+
+Phase 3.3.4 Slice Area Swap
+
+Phase 3.3.4.1 Slice Area Swap Initial
+Phase 3.3.4.1 Slice Area Swap Initial | Checksum: 199539ee6
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:32 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8362 ; free virtual = 13636
+Phase 3.3.4 Slice Area Swap | Checksum: 199539ee6
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:33 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8351 ; free virtual = 13626
+Phase 3.3 Small Shape DP | Checksum: 1d17940fb
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:33 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8367 ; free virtual = 13641
+
+Phase 3.4 Re-assign LUT pins
+Phase 3.4 Re-assign LUT pins | Checksum: 1dd1f906e
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:33 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8367 ; free virtual = 13641
+
+Phase 3.5 Pipeline Register Optimization
+Phase 3.5 Pipeline Register Optimization | Checksum: 15ea4532a
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:33 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8367 ; free virtual = 13641
+Phase 3 Detail Placement | Checksum: 15ea4532a
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:33 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8367 ; free virtual = 13641
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk_tx_virtual' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:9]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk_rx_virtual' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:14]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1f53daeb3
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 4 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.430 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1e709d06d
+
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3638.941 ; gain = 0.000 ; free physical = 8373 ; free virtual = 13648
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 1e4b71ebd
+
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3638.941 ; gain = 0.000 ; free physical = 8373 ; free virtual = 13648
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1f53daeb3
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:34 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8373 ; free virtual = 13648
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.523. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 1a47b339e
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:34 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8373 ; free virtual = 13647
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:34 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8373 ; free virtual = 13647
+Phase 4.1 Post Commit Optimization | Checksum: 1a47b339e
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:34 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8373 ; free virtual = 13647
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3638.941 ; gain = 0.000 ; free physical = 8382 ; free virtual = 13657
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 281525929
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:35 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8385 ; free virtual = 13659
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                2x2|
+|___________|___________________|___________________|
+|      South|                1x1|                2x2|
+|___________|___________________|___________________|
+|       East|                1x1|                2x2|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 281525929
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:35 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8385 ; free virtual = 13659
+Phase 4.3 Placer Reporting | Checksum: 281525929
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:35 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8385 ; free virtual = 13659
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3638.941 ; gain = 0.000 ; free physical = 8385 ; free virtual = 13659
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:35 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8385 ; free virtual = 13659
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 284d8a899
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:35 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8385 ; free virtual = 13659
+Ending Placer Task | Checksum: 19ef2477a
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:35 . Memory (MB): peak = 3638.941 ; gain = 870.684 ; free physical = 8385 ; free virtual = 13659
+INFO: [Common 17-83] Releasing license: Implementation
+76 Infos, 3 Warnings, 2 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:37 . Memory (MB): peak = 3638.941 ; gain = 947.453 ; free physical = 8437 ; free virtual = 13711
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.12 . Memory (MB): peak = 3678.961 ; gain = 40.020 ; free physical = 8433 ; free virtual = 13711
+INFO: [Common 17-1381] The checkpoint '/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.runs/impl_1/wave_gen_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file wave_gen_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.3 ; elapsed = 00:00:00.4 . Memory (MB): peak = 3686.965 ; gain = 0.000 ; free physical = 8389 ; free virtual = 13665
+INFO: [runtcl-4] Executing : report_utilization -file wave_gen_utilization_placed.rpt -pb wave_gen_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file wave_gen_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.12 . Memory (MB): peak = 3686.965 ; gain = 0.000 ; free physical = 8421 ; free virtual = 13697
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcku040'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku040'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 8112fd56 ConstDB: 0 ShapeSum: 41082499 RouteDB: dcd7258b
+Post Restoration Checksum: NetGraph: 7bd0ebe8 NumContArr: 60b63495 Constraints: c3d8b6ef Timing: 0
+Phase 1 Build RT Design | Checksum: 1a05fd76c
+
+Time (s): cpu = 00:02:06 ; elapsed = 00:01:54 . Memory (MB): peak = 3686.965 ; gain = 0.000 ; free physical = 8083 ; free virtual = 13359
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 1a05fd76c
+
+Time (s): cpu = 00:02:06 ; elapsed = 00:01:54 . Memory (MB): peak = 3686.965 ; gain = 0.000 ; free physical = 8057 ; free virtual = 13333
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 1a05fd76c
+
+Time (s): cpu = 00:02:06 ; elapsed = 00:01:54 . Memory (MB): peak = 3686.965 ; gain = 0.000 ; free physical = 8057 ; free virtual = 13333
+
+Phase 2.3 Global Clock Net Routing
+ Number of Nodes with overlaps = 0
+Phase 2.3 Global Clock Net Routing | Checksum: 17b858cd2
+
+Time (s): cpu = 00:02:07 ; elapsed = 00:01:55 . Memory (MB): peak = 3739.965 ; gain = 53.000 ; free physical = 8065 ; free virtual = 13341
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 284b833fc
+
+Time (s): cpu = 00:02:08 ; elapsed = 00:01:55 . Memory (MB): peak = 3739.965 ; gain = 53.000 ; free physical = 8057 ; free virtual = 13333
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.609  | TNS=0.000  | WHS=-1.525 | THS=-72.299|
+
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 1059
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 747
+  Number of Partially Routed Nets     = 312
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 27599eed4
+
+Time (s): cpu = 00:02:10 ; elapsed = 00:01:56 . Memory (MB): peak = 3739.965 ; gain = 53.000 ; free physical = 8064 ; free virtual = 13340
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 27599eed4
+
+Time (s): cpu = 00:02:10 ; elapsed = 00:01:56 . Memory (MB): peak = 3739.965 ; gain = 53.000 ; free physical = 8064 ; free virtual = 13340
+Phase 3 Initial Routing | Checksum: 1f108d17d
+
+Time (s): cpu = 00:02:25 ; elapsed = 00:02:03 . Memory (MB): peak = 3786.965 ; gain = 100.000 ; free physical = 7987 ; free virtual = 13263
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 190
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.383 | TNS=-17.651| WHS=-0.528 | THS=-6.523 |
+
+Phase 4.1 Global Iteration 0 | Checksum: 21a8e337d
+
+Time (s): cpu = 00:03:59 ; elapsed = 00:02:43 . Memory (MB): peak = 3916.965 ; gain = 230.000 ; free physical = 7945 ; free virtual = 13221
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 13
+ Number of Nodes with overlaps = 21
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.266 | TNS=-13.613| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 2600374b7
+
+Time (s): cpu = 00:08:52 ; elapsed = 00:04:58 . Memory (MB): peak = 3920.965 ; gain = 234.000 ; free physical = 8004 ; free virtual = 13281
+
+Phase 4.3 Global Iteration 2
+ Number of Nodes with overlaps = 10
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 10
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.337 | TNS=-14.867| WHS=N/A    | THS=N/A    |
+
+Phase 4.3 Global Iteration 2 | Checksum: 1ae541630
+
+Time (s): cpu = 00:13:22 ; elapsed = 00:07:21 . Memory (MB): peak = 3920.965 ; gain = 234.000 ; free physical = 8019 ; free virtual = 13295
+Phase 4 Rip-up And Reroute | Checksum: 1ae541630
+
+Time (s): cpu = 00:13:22 ; elapsed = 00:07:21 . Memory (MB): peak = 3920.965 ; gain = 234.000 ; free physical = 8019 ; free virtual = 13295
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 2770a9e7c
+
+Time (s): cpu = 00:13:23 ; elapsed = 00:07:22 . Memory (MB): peak = 3920.965 ; gain = 234.000 ; free physical = 8018 ; free virtual = 13294
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.266 | TNS=-13.613| WHS=0.037  | THS=0.000  |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 20e94feda
+
+Time (s): cpu = 00:13:25 ; elapsed = 00:07:23 . Memory (MB): peak = 3920.965 ; gain = 234.000 ; free physical = 8018 ; free virtual = 13295
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 20e94feda
+
+Time (s): cpu = 00:13:25 ; elapsed = 00:07:23 . Memory (MB): peak = 3920.965 ; gain = 234.000 ; free physical = 8018 ; free virtual = 13295
+Phase 5 Delay and Skew Optimization | Checksum: 20e94feda
+
+Time (s): cpu = 00:13:25 ; elapsed = 00:07:23 . Memory (MB): peak = 3920.965 ; gain = 234.000 ; free physical = 8018 ; free virtual = 13295
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 19c1a7ba0
+
+Time (s): cpu = 00:13:25 ; elapsed = 00:07:24 . Memory (MB): peak = 3920.965 ; gain = 234.000 ; free physical = 8015 ; free virtual = 13291
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.607 | TNS=-5.784 | WHS=-0.035 | THS=-0.292 |
+
+Phase 6.1 Hold Fix Iter | Checksum: 140d112b6
+
+Time (s): cpu = 00:13:26 ; elapsed = 00:07:24 . Memory (MB): peak = 3920.965 ; gain = 234.000 ; free physical = 8015 ; free virtual = 13291
+WARNING: [Route 35-468] The router encountered 2 pins that are both setup-critical and hold-critical and tried to fix hold violations at the expense of setup slack. Such pins are:
+	samp_gen_i0/samp_cnt_reg[0]/R
+	samp_gen_i0/samp_cnt_reg[6]/R
+
+Phase 6 Post Hold Fix | Checksum: 15a786fff
+
+Time (s): cpu = 00:13:26 ; elapsed = 00:07:24 . Memory (MB): peak = 3920.965 ; gain = 234.000 ; free physical = 8015 ; free virtual = 13291
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.0653089 %
+  Global Horizontal Routing Utilization  = 0.0671704 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 26.6949%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 28.692%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 29.8077%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 39.4231%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 2d826af1e
+
+Time (s): cpu = 00:13:27 ; elapsed = 00:07:25 . Memory (MB): peak = 3920.965 ; gain = 234.000 ; free physical = 8015 ; free virtual = 13291
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 2d826af1e
+
+Time (s): cpu = 00:13:27 ; elapsed = 00:07:25 . Memory (MB): peak = 3920.965 ; gain = 234.000 ; free physical = 8010 ; free virtual = 13287
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 2d826af1e
+
+Time (s): cpu = 00:13:28 ; elapsed = 00:07:25 . Memory (MB): peak = 3920.965 ; gain = 234.000 ; free physical = 8010 ; free virtual = 13286
+
+Phase 10 Post Router Timing
+
+Phase 10.1 Update Timing
+Phase 10.1 Update Timing | Checksum: 33460ab9e
+
+Time (s): cpu = 00:13:28 ; elapsed = 00:07:25 . Memory (MB): peak = 3920.965 ; gain = 234.000 ; free physical = 8010 ; free virtual = 13286
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.607 | TNS=-5.784 | WHS=0.037  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 33460ab9e
+
+Time (s): cpu = 00:13:28 ; elapsed = 00:07:25 . Memory (MB): peak = 3920.965 ; gain = 234.000 ; free physical = 8010 ; free virtual = 13286
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:13:28 ; elapsed = 00:07:25 . Memory (MB): peak = 3920.965 ; gain = 234.000 ; free physical = 8098 ; free virtual = 13375
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+95 Infos, 5 Warnings, 2 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:13:31 ; elapsed = 00:07:27 . Memory (MB): peak = 3920.965 ; gain = 234.000 ; free physical = 8098 ; free virtual = 13375
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.16 . Memory (MB): peak = 3936.973 ; gain = 8.004 ; free physical = 8095 ; free virtual = 13375
+INFO: [Common 17-1381] The checkpoint '/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.runs/impl_1/wave_gen_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file wave_gen_drc_routed.rpt -pb wave_gen_drc_routed.pb -rpx wave_gen_drc_routed.rpx
+Command: report_drc -file wave_gen_drc_routed.rpt -pb wave_gen_drc_routed.pb -rpx wave_gen_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.runs/impl_1/wave_gen_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file wave_gen_methodology_drc_routed.rpt -pb wave_gen_methodology_drc_routed.pb -rpx wave_gen_methodology_drc_routed.rpx
+Command: report_methodology -file wave_gen_methodology_drc_routed.rpt -pb wave_gen_methodology_drc_routed.pb -rpx wave_gen_methodology_drc_routed.rpx
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk_tx_virtual' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:9]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk_rx_virtual' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:14]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 4 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.runs/impl_1/wave_gen_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file wave_gen_power_routed.rpt -pb wave_gen_power_summary_routed.pb -rpx wave_gen_power_routed.rpx
+Command: report_power -file wave_gen_power_routed.rpt -pb wave_gen_power_summary_routed.pb -rpx wave_gen_power_routed.rpx
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk_tx_virtual' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:9]
+INFO: [Constraints 18-483] create_clock: no pin(s)/port(s)/net(s) specified as objects, only virtual clock 'clk_rx_virtual' will be created. If you don't want this, please specify pin(s)/ports(s)/net(s) as objects to the command. [/home/amd/training/phys_opt/lab/KCU105/verilog/wave_gen.srcs/constrs_1/imports/wave_gen_timing_phys_opt.xdc:14]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+112 Infos, 5 Warnings, 2 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file wave_gen_route_status.rpt -pb wave_gen_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file wave_gen_timing_summary_routed.rpt -pb wave_gen_timing_summary_routed.pb -rpx wave_gen_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file wave_gen_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file wave_gen_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file wave_gen_bus_skew_routed.rpt -pb wave_gen_bus_skew_routed.pb -rpx wave_gen_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 30 13:20:02 2022...

@@ -1,0 +1,114 @@
+###########################################################################
+# IO_PinPlanning Completer Script
+###########################################################################
+
+# load the standard helper files
+source ../../completer_helper_script/helper.tcl
+source ../../completer_helper_script/completer_helper.tcl
+
+# project constants
+set verbose 	1
+set tcName 	IO_PinPlanning
+set demoOrLab 	completed
+set projName 	uart_led
+
+############################################################
+# Step 1 : Creating a new project and adding source files
+############################################################
+proc createProj {} {
+ variable language
+ variable platform
+ variable tcName
+ variable demoOrLab
+ variable projName
+ variable sourceList
+ variable trainingPath
+
+# Creates the project, adds source files
+projectCreate 
+
+if {$projName == "uart_led"} {
+   if {$language == "vhdl"} {
+         set sourceList [list led_ctl meta_harden uart_baud_gen uart_led uart_led_pkg uart_rx uart_rx_ctl]
+   } elseif {$language == "verilog"} {
+	 set sourceList [list led_ctl meta_harden uart_baud_gen uart_led uart_rx uart_rx_ctl]
+   } 
+} 
+
+sourcesAdd $sourceList
+
+if {$projName == "uart_led"} {
+   set constraintFileList [list uart_led.xdc] 
+} elseif {$projName == "wave_gen"} {
+   set constraintFileList [list wave_gen_pins.xdc wave_gen_timing.xdc]
+}
+
+constraintFilesAdd $constraintFileList
+set_property target_constrs_file $trainingPath/training/$tcName/$demoOrLab/KCU105/$language/uart_led.srcs/constrs_1/imports/support/uart_led.xdc [current_fileset -constrset]
+
+}
+
+############################################################
+# Step 2 : Analyzing the Design and viewing DRC violations
+############################################################
+proc drcCheck {} {
+ variable platform
+ variable language
+ variable tcName
+ variable demoOrLab 
+ variable projName
+set projName.srcs {append $projName .srcs}
+
+  set_property top uart_led [current_fileset]
+  synth_design -rtl -name rtl_1
+  report_drc -name drc_1 -ruledecks {default}
+  markLastStep drcCheck	   
+} 
+	
+############################################################
+#Step 3 : Placing the Pins
+############################################################
+proc placePins {} {
+ variable platform
+ variable language
+ variable tcName
+ variable demoOrLab 
+ variable projName
+
+set projName.srcs {append $projName .srcs}
+if {$platform == "KCU105"} {
+  place_ports btn_pin AE10
+  set_property IOSTANDARD LVCMOS18 [get_ports [list btn_pin]]
+  place_ports rxd_pin G25
+  set_property IOSTANDARD LVCMOS18 [get_ports [list rxd_pin]]
+  place_ports rst_pin AN8
+  set_property IOSTANDARD LVCMOS18 [get_ports [list rst_pin]]
+}
+
+save_constraints
+#_as constrs_2 -target_constrs_file uart_led.xdc
+#set_property constrset constrs_2 [get_runs synth_1]
+#set_property constrset constrs_2 [get_runs impl_1] 
+
+report_drc -name drc_2 -ruledecks {default}
+markLastStep placedPins
+
+} 
+
+##########################################################
+# Running through the steps that are required, with make
+##########################################################
+proc make {stopAt} {
+   puts "Running until the step $stopAt"
+   set limit [string tolower $stopAt]
+   switch $limit {
+      step1  { createProj }
+      step2  { make step1; drcCheck }
+      step3  { make step2; placePins }
+      all    { make step3 }
+      
+      default { 
+         puts "Call the make proc, Should be make step*" 
+			  }	
+	}	
+}

@@ -1,0 +1,50 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Fri Nov 25 23:22:26 2022
+| Host         : amd running 64-bit Ubuntu 20.04.5 LTS
+| Command      : report_methodology -file cksum_methodology_drc_routed.rpt -pb cksum_methodology_drc_routed.pb -rpx cksum_methodology_drc_routed.rpx
+| Design       : cksum
+| Device       : xcku040-ffva1156-2-e
+| Speed File   : -2
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 2
++--------+----------+--------------------------------------------------------+------------+
+| Rule   | Severity | Description                                            | Violations |
++--------+----------+--------------------------------------------------------+------------+
+| XDCC-1 | Warning  | Scoped Clock constraint overwritten with the same name | 1          |
+| XDCC-7 | Warning  | Scoped Clock constraint overwritten on the same source | 1          |
++--------+----------+--------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+XDCC-1#1 Warning
+Scoped Clock constraint overwritten with the same name  
+A new clock constraint create_clock overrides a previous scoped clock constraint with the same name. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 10.000 -name SysClk_in [get_ports SysClk_in] (Source: /home/amd/training/Pipelining/lab/KCU105/cksum/cksum.srcs/constrs_1/imports/support/cksum.xdc (Line: 1))
+Previous: create_clock -period 10.000 [get_ports SysClk_in] (Source: /home/amd/training/Pipelining/lab/KCU105/cksum/cksum.gen/sources_1/ip/clk_gen/clk_gen.xdc (Line: 56))
+Related violations: <none>
+
+XDCC-7#1 Warning
+Scoped Clock constraint overwritten on the same source  
+A new clock constraint create_clock overrides a previous scoped clock constraint defined on the same source. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 10.000 -name SysClk_in [get_ports SysClk_in] (Source: /home/amd/training/Pipelining/lab/KCU105/cksum/cksum.srcs/constrs_1/imports/support/cksum.xdc (Line: 1))
+Previous: create_clock -period 10.000 [get_ports SysClk_in] (Source: /home/amd/training/Pipelining/lab/KCU105/cksum/cksum.gen/sources_1/ip/clk_gen/clk_gen.xdc (Line: 56))
+Related violations: <none>
+
+

@@ -1,0 +1,459 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental /home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/utils_1/imports/synth_1/top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+
+1. Read QOR Suggestions Summary
+-------------------------------
+
+Read QOR Suggestions Summary
++---------------------------------------------+---------------+-------+
+|              Suggestion Summary             | Incr Friendly | Total |
++---------------------------------------------+---------------+-------+
+| Total Number of Enabled Suggestions         |             1 |     7 |
+|   Automatic                                 |             1 |     6 |
+|   Manual                                    |             0 |     1 |
+|   APPLICABLE_FOR                            |               |       |
+|    synth_design                             |             0 |     6 |
+|    opt_design                               |             0 |     0 |
+|     That overlap with synthesis suggestions |             0 |     0 |
+|    place_design                             |             1 |     1 |
+|    postplace_phys_opt_design                |             0 |     0 |
+|    route_design                             |             0 |     0 |
+|    postroute_phys_opt_design                |             0 |     0 |
+|   ML Strategy                               |             0 |     0 |
+| Total Number of Disabled Suggestions        |             0 |     0 |
++---------------------------------------------+---------------+-------+
+
+
+INFO: [Vivado_Tcl 4-1103] Successfully read QoR suggestions file: /home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/utils_1/imports/impl_1/rqs_report.rqs.
+Command: synth_design -top top -part xqvu3p-ffrc1517-2LV-e
+INFO: [Implflow 47-768] Applying enabled RQS suggestion for synth_design: RQS_TIMING-7_2-1
+INFO: [Implflow 47-768] Applying enabled RQS suggestion for synth_design: RQS_TIMING-44_2-1
+INFO: [Implflow 47-768] Applying enabled RQS suggestion for synth_design: RQS_TIMING-33_2-1
+INFO: [Implflow 47-768] Applying enabled RQS suggestion for synth_design: RQS_NETLIST-19-1
+INFO: [Implflow 47-768] Applying enabled RQS suggestion for synth_design: RQS_NETLIST-10-1
+INFO: [Vivado_Tcl 4-1104] Reading unmanaged XDC file for RQS suggestions:./.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xqvu3p'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xqvu3p'
+INFO: [Device 21-403] Loading part xqvu3p-ffrc1517-2LV-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 54193
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3177.160 ; gain = 293.828 ; free physical = 7431 ; free virtual = 12714
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/top.vhd:49]
+	Parameter CLKIN_PERIOD bound to: 10.000000 - type: double 
+INFO: [Synth 8-3491] module 'clocking_module' declared at '/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/clocking_module.vhd:8' bound to instance 'mmcm_inst' of component 'clocking_module' [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/top.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'clocking_module' [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/clocking_module.vhd:27]
+	Parameter CLKIN_PERIOD bound to: 10.000000 - type: double 
+INFO: [Synth 8-113] binding component instance 'clkin1_ibuf' to cell 'IBUF' [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/clocking_module.vhd:56]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 9.000000 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 1.500000 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 3 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 8 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 3 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 2 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: AUTO - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-113] binding component instance 'MMCME4_ADV_inst' to cell 'MMCME4_ADV' [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/clocking_module.vhd:62]
+INFO: [Synth 8-113] binding component instance 'clkout1_buf' to cell 'BUFG' [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/clocking_module.vhd:144]
+INFO: [Synth 8-113] binding component instance 'clkout2_buf' to cell 'BUFG' [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/clocking_module.vhd:150]
+INFO: [Synth 8-256] done synthesizing module 'clocking_module' (0#1) [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/clocking_module.vhd:27]
+	Parameter DATA_WIDTH bound to: 2000 - type: integer 
+INFO: [Synth 8-3491] module 'reg_clka_to_clkb' declared at '/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/reg_clka_to_clkb.vhd:34' bound to instance 'clk300_to_clk600_ffs_i' of component 'reg_clka_to_clkb' [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/top.vhd:123]
+INFO: [Synth 8-638] synthesizing module 'reg_clka_to_clkb' [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/reg_clka_to_clkb.vhd:42]
+	Parameter DATA_WIDTH bound to: 2000 - type: integer 
+INFO: [Synth 8-3491] module 'bit_expander' declared at '/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/bit_expander.vhd:34' bound to instance 'bit_expander_i' of component 'bit_expander' [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/reg_clka_to_clkb.vhd:66]
+INFO: [Synth 8-638] synthesizing module 'bit_expander' [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/bit_expander.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'bit_expander' (0#1) [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/bit_expander.vhd:39]
+INFO: [Synth 8-3491] module 'bit_reducer' declared at '/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/bit_reducer.vhd:34' bound to instance 'bit_reducer_i' of component 'bit_reducer' [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/reg_clka_to_clkb.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'bit_reducer' [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/bit_reducer.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'bit_reducer' (0#1) [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/bit_reducer.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'reg_clka_to_clkb' (0#1) [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/reg_clka_to_clkb.vhd:42]
+	Parameter DATA_WIDTH bound to: 2000 - type: integer 
+INFO: [Synth 8-3491] module 'reg_clka_to_clkb' declared at '/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/reg_clka_to_clkb.vhd:34' bound to instance 'clk600_to_clk300_ffs_i' of component 'reg_clka_to_clkb' [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/top.vhd:134]
+INFO: [Synth 8-256] done synthesizing module 'top' (0#1) [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/top.vhd:49]
+WARNING: [Synth 8-3936] Found unconnected internal register 'data_in_300_i_reg' and it is trimmed from '6' to '3' bits. [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/top.vhd:128]
+WARNING: [Synth 8-3936] Found unconnected internal register 'data_in_600_i_reg' and it is trimmed from '6' to '3' bits. [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/top.vhd:139]
+WARNING: [Synth 8-7129] Port data_in_300[5] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in_300[4] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in_300[3] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in_600[5] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in_600[4] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in_600[3] in module top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3264.129 ; gain = 380.797 ; free physical = 8510 ; free virtual = 13794
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3281.941 ; gain = 398.609 ; free physical = 8510 ; free virtual = 13793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 3281.941 ; gain = 398.609 ; free physical = 8510 ; free virtual = 13793
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3287.879 ; gain = 0.000 ; free physical = 8505 ; free virtual = 13788
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/OriginalConstraints/new/constraints.xdc]
+Finished Parsing XDC File [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/OriginalConstraints/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/OriginalConstraints/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl]
+INFO: [Vivado_Tcl 4-1398] Setting property  FAILED_TO_APPLY=0 for QOR suggestion RQS_TIMING-7_2. [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl:18]
+INFO: [Vivado_Tcl 4-1398] Setting property  APPLIED=1 for QOR suggestion RQS_TIMING-7_2. [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl:18]
+INFO: [Vivado_Tcl 4-1398] Setting property  FAILED_TO_APPLY=0 for QOR suggestion RQS_TIMING-44_2. [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl:26]
+INFO: [Vivado_Tcl 4-1398] Setting property  APPLIED=1 for QOR suggestion RQS_TIMING-44_2. [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl:26]
+INFO: [Vivado_Tcl 4-1398] Setting property  FAILED_TO_APPLY=0 for QOR suggestion RQS_TIMING-33_2. [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl:34]
+INFO: [Vivado_Tcl 4-1398] Setting property  APPLIED=1 for QOR suggestion RQS_TIMING-33_2. [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl:34]
+INFO: [Vivado_Tcl 4-1398] Setting property  FAILED_TO_APPLY=0 for QOR suggestion RQS_NETLIST-19. [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl:42]
+INFO: [Vivado_Tcl 4-1398] Setting property  APPLIED=1 for QOR suggestion RQS_NETLIST-19. [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl:42]
+INFO: [Vivado_Tcl 4-1398] Setting property  FAILED_TO_APPLY=0 for QOR suggestion RQS_NETLIST-10. [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl:46]
+INFO: [Vivado_Tcl 4-1398] Setting property  APPLIED=1 for QOR suggestion RQS_NETLIST-10. [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl:46]
+Finished Sourcing Tcl File [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Timing 38-2] Deriving generated clocks
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3434.621 ; gain = 0.000 ; free physical = 8401 ; free virtual = 13684
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  BUFG => BUFGCE: 2 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3434.621 ; gain = 0.000 ; free physical = 8401 ; free virtual = 13684
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3434.621 ; gain = 551.289 ; free physical = 8499 ; free virtual = 13783
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xqvu3p-ffrc1517-2LV-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3434.621 ; gain = 551.289 ; free physical = 8499 ; free virtual = 13783
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property BLOCK_SYNTH.PRESERVE_BOUNDARY = 1 for clk300_to_clk600_ffs_i. (constraint file  /home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/OriginalConstraints/new/constraints.xdc, line 17).
+Applied set_property BLOCK_SYNTH.PRESERVE_BOUNDARY = 1 for clk600_to_clk300_ffs_i. (constraint file  /home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/OriginalConstraints/new/constraints.xdc, line 18).
+Applied set_property SRL_STYLE = register for clk300_to_clk600_ffs_i/bit_reducer_i/data_out_reg. (constraint file  /home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl, line 18).
+Applied set_property RETIMING_FORWARD = 1 for clk300_to_clk600_ffs_i/a1_2r_reg. (constraint file  /home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl, line 42).
+Applied set_property RETIMING_FORWARD = 1 for clk600_to_clk300_ffs_i/a1_2r_reg. (constraint file  /home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl, line 42).
+Applied set_property RETIMING_FORWARD = 3 for clk300_to_clk600_ffs_i/expanded_sig3_reg. (constraint file  /home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl, line 46).
+Applied set_property RETIMING_BACKWARD = 2 for clk300_to_clk600_ffs_i/bit_reducer_i/tmp_r_reg. (constraint file  /home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl, line 46).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 3434.621 ; gain = 551.289 ; free physical = 8489 ; free virtual = 13773
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 3434.621 ; gain = 551.289 ; free physical = 8457 ; free virtual = 13742
+---------------------------------------------------------------------------------
+top__GC0reg_clka_to_clkbreg_clka_to_clkb__xdcDup__1clocking_module__GC0---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 3434.621 ; gain = 551.289 ; free physical = 8455 ; free virtual = 13741
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3434.621 ; gain = 551.289 ; free physical = 8462 ; free virtual = 13747
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Mimic Skeleton from Reference
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Mimic Skeleton from Reference : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 3434.621 ; gain = 551.289 ; free physical = 8476 ; free virtual = 13761
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: yes
+
+   Stitch points used : changed
+
+
+2. Change Summary
+
+Report Incremental Modules: 
++-+----------------+------------+----------+----------+
+| |Changed Modules |Replication |Instances |Changed % |
++-+----------------+------------+----------+----------+
++-+----------------+------------+----------+----------+
+
+
+   Full Design Size (number of cells) : 16042
+   Resynthesis Design Size (number of cells) : 1
+   Resynth % : 0.0062,  Reuse % : 99.9938
+
+3. Reference Checkpoint Information
+
++-------------------------------------------------------------------------------------------------------------------+
+| DCP Location:  | /home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/utils_1/imports/synth_1/top.dcp |
++-------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------+------------------------------+
+|         DCP Information        |             Value            |
++--------------------------------+------------------------------+
+| Vivado Version                 |                    v2022.1 |
+| DCP State                      |                              |
++--------------------------------+------------------------------+
+
+
+
+Report RTL Partitions: 
++------+------------------------------------+------------+----------+
+|      |RTL Partition                       |Replication |Instances |
++------+------------------------------------+------------+----------+
+|1     |clocking_module__GC0_#REUSE#        |           1|         0|
+|2     |reg_clka_to_clkb__xdcDup__1_#REUSE# |           1|         0|
+|3     |reg_clka_to_clkb_#REUSE#            |           1|         0|
+|4     |top__GC0_#REUSE#                    |           1|         0|
++------+------------------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2280 (col length:120)
+BRAMs: 1440 (col length: RAMB18 120 RAMB36 60)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7077] IncrSyn: subsequent runs will still be incremental as the reference run was parallel and that data is reused
+WARNING: [Synth 8-7129] Port data_in_300[5] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in_300[4] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in_300[3] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in_600[5] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in_600[4] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data_in_600[3] in module top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 3434.621 ; gain = 551.289 ; free physical = 8471 ; free virtual = 13766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Stitch Unchanged AreaOpt Partitions
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged AreaOpt Partitions : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 3434.621 ; gain = 551.289 ; free physical = 8469 ; free virtual = 13764
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 3592.426 ; gain = 709.094 ; free physical = 8036 ; free virtual = 13341
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 3592.426 ; gain = 709.094 ; free physical = 8041 ; free virtual = 13346
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7077] IncrSyn: subsequent runs will still be incremental as the reference run was parallel and that data is reused
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 3611.457 ; gain = 728.125 ; free physical = 8041 ; free virtual = 13346
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Stitch Unchanged Partitions
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged Partitions : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 3611.457 ; gain = 728.125 ; free physical = 8038 ; free virtual = 13343
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin clk_150_i_inferred:in0 to constant 0
+WARNING: [Synth 8-3295] tying undriven pin clk_400_i_inferred:in0 to constant 0
+WARNING: [Synth 8-3295] tying undriven pin clk_500_i_inferred:in0 to constant 0
+WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/top.vhd:34]
+WARNING: [Synth 8-5396] Clock pin I1 has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/top.vhd:34]
+WARNING: [Synth 8-5396] Clock pin I1 has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/top.vhd:34]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/top.vhd:139]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/top.vhd:139]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/top.vhd:139]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/top.vhd:197]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/clocking_module.vhd:138]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/clocking_module.vhd:139]
+WARNING: [Synth 8-5396] Clock pin CLK has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/top.vhd:34]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/top.vhd:128]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/top.vhd:128]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/top.vhd:128]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.srcs/sources_1/imports/original/top.vhd:188]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 3627.348 ; gain = 744.016 ; free physical = 8016 ; free virtual = 13330
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 3627.348 ; gain = 744.016 ; free physical = 8016 ; free virtual = 13330
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 3627.348 ; gain = 744.016 ; free physical = 8012 ; free virtual = 13327
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 3627.348 ; gain = 744.016 ; free physical = 8012 ; free virtual = 13327
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 3627.348 ; gain = 744.016 ; free physical = 8010 ; free virtual = 13324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 3627.348 ; gain = 744.016 ; free physical = 8010 ; free virtual = 13324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     2|
+|2     |LUT1       |     3|
+|3     |LUT2       |     2|
+|4     |LUT5       |     2|
+|5     |LUT6       |   798|
+|6     |MMCME4_ADV |     1|
+|7     |SRL16E     |     1|
+|8     |FDRE       | 10043|
+|9     |IBUF       |     8|
+|10    |OBUF       |    13|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 3627.348 ; gain = 744.016 ; free physical = 8010 ; free virtual = 13324
+---------------------------------------------------------------------------------
+
+Report Applied BLOCK_SYNTH Properties: 
++--------+-----------------------+-------------------------------+
+|Inst ID |Instance Name          |Applied BLOCK_SYNTH Properties |
++--------+-----------------------+-------------------------------+
+|1       |clk300_to_clk600_ffs_i |"PRESERVE_BOUNDARY 1"          |
+|2       |clk600_to_clk300_ffs_i |"PRESERVE_BOUNDARY 1"          |
++--------+-----------------------+-------------------------------+
+
+Report BLOCK_SYNTH Property Instance Level Cell Usage: 
++-+-----+
+| |Cell |
++-+-----+
++-+-----+
+NOTE: Inst IDs in this report represent instances and are taken from the Report Applied BLOCK_SYNTH Properties.
+
+Synthesis finished with 0 errors, 0 critical warnings and 27 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 3627.348 ; gain = 591.336 ; free physical = 8038 ; free virtual = 13353
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 3627.355 ; gain = 744.016 ; free physical = 8038 ; free virtual = 13353
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 3627.355 ; gain = 0.000 ; free physical = 8129 ; free virtual = 13444
+INFO: [Netlist 29-17] Analyzing 11 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Sourcing Tcl File [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl]
+INFO: [Vivado_Tcl 4-1398] Setting property  FAILED_TO_APPLY=0 for QOR suggestion RQS_TIMING-7_2. [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl:18]
+INFO: [Vivado_Tcl 4-1398] Setting property  APPLIED=1 for QOR suggestion RQS_TIMING-7_2. [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl:18]
+WARNING: [Vivado 12-180] No cells matched 'clk300_to_clk600_ffs_i/bit_reducer_i/tmp_r_reg'. [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl:26]
+WARNING: [Vivado 12-180] No cells matched 'clk300_to_clk600_ffs_i/expanded_sig3_reg[1932]'. [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl:34]
+WARNING: [Vivado 12-180] No cells matched 'clk300_to_clk600_ffs_i/a1_2r_reg'. [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl:42]
+WARNING: [Vivado 12-180] No cells matched 'clk600_to_clk300_ffs_i/a1_2r_reg'. [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl:42]
+WARNING: [Vivado 12-180] No cells matched 'clk300_to_clk600_ffs_i/expanded_sig3_reg[1932]'. [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl:46]
+WARNING: [Vivado 12-180] No cells matched 'clk300_to_clk600_ffs_i/bit_reducer_i/tmp_r_reg'. [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl:46]
+Finished Sourcing Tcl File [/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/.Xil/Vivado-54074-xilinx/RQSPreSynth.tcl]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-326] The CLKFBOUT to CLKFBIN net for instance mmcm_inst/MMCME4_ADV_inst with COMPENSATION=INTERNAL is optimized away to aid design routability
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3671.941 ; gain = 0.000 ; free physical = 8070 ; free virtual = 13385
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 10 instances were transformed.
+  BUFG => BUFGCE: 2 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 8 instances
+
+Synth Design complete, checksum: f2cb9038
+INFO: [Common 17-83] Releasing license: Synthesis
+61 Infos, 41 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:49 . Memory (MB): peak = 3671.941 ; gain = 796.613 ; free physical = 8281 ; free virtual = 13596
+INFO: [Common 17-1381] The checkpoint '/home/xilinx/training/Report_QoR/lab/xqvu3p/vhdl/report_qor.runs/synth_1_copy_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jul  8 07:36:13 2022...
